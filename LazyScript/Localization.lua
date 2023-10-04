@@ -2909,7 +2909,1047 @@ function lazyScript.LoadLocalization(locale)
 		lsLocale.frFR.ACTION_TTS.throw            = nil
 		lsLocale.frFR.ACTION_TTS.findHerbs        = "D\195\169couverte d'herbes"
 		lsLocale.frFR.ACTION_TTS.findMinerals     = "D\195\169couverte de gisements"
+		elseif (locale == "zhCN") then
 		
+		lsLocale.zhCN = {}
+		--对影响功能的部分做了中文简体本地化的翻译
+		--界面上不做翻译
+		--保留了原来英文的内容 方便后续对战修改
+		--乌龟服新增加的技能目前没有追加
+		-- Popup dialog text
+		lsLocale.zhCN.INCOMPATIBLE_ADDON = "%s is incompatible with %s. Please update to the latest versions."
+		lsLocale.zhCN.DELETE_FORM = "Are you sure you want to delete the '%s' form?"
+		
+		-- Initiate spell casting
+		lsLocale.zhCN.SPELLCASTOTHERSTART      = "(.+)开始施放(.+)。"--lsLocale.enUS.SPELLCASTOTHERSTART      = "(.+) begins to cast (.+)."
+		lsLocale.zhCN.SPELLPERFORMOTHERSTART   = "(.+)开始施展(.+)。"--lsLocale.enUS.SPELLPERFORMOTHERSTART   = "(.+) begins to perform (.+)."
+		
+		--Spell type catches
+		lsLocale.zhCN.SPELLTEXT = {
+			".+的(.+)致命一击对.+造成%d+点(.+)伤害。",--".+'s (.+) crits .+ for %d+ (.+) damage.",		-- SPELLLOGCRITSCHOOLOTHEROTHER = "%s's %s crits %s for %d %s damage.";
+			".+的(.+)击中.+造成%d+点(.+)伤害。",--".+'s (.+) hits .+ for %d+ (.+) damage.",		-- SPELLLOGSCHOOLOTHEROTHER = "%s's %s hits %s for %d %s damage."
+			"你受到%d+点(.+)伤害（.+的(.+)）。",--	"You suffer %d+ (.+) damage from .+'s (.+).", 	-- You suffer 3 frost damage from Rabbit's Ice Nova.
+		}
+		
+		-- The class of spell damage
+		lsLocale.zhCN.SPELLTYPE = {
+			fire     = "火焰",			-- SPELL_SCHOOL2_CAP = "Fire"-- 	fire     = "Fire",				-- SPELL_SCHOOL2_CAP = "Fire"
+			frost    = "冰霜",			-- SPELL_SCHOOL4_CAP = "Frost"-- 	frost    = "Frost",				-- SPELL_SCHOOL4_CAP = "Frost"
+			nature   = "自然",			-- SPELL_SCHOOL3_CAP = "Nature"-- 	nature   = "Nature",			-- SPELL_SCHOOL3_CAP = "Nature"
+			shadow   = "暗影",			-- SPELL_SCHOOL5_CAP = "Shadow"-- 	shadow   = "Shadow",			-- SPELL_SCHOOL5_CAP = "Shadow"
+			arcane   = "奥术",			-- SPELL_SCHOOL6_CAP = "Arcane"-- 	arcane   = "Arcane",			-- SPELL_SCHOOL6_CAP = "Arcane"
+			holy     = "神圣",			-- SPELL_SCHOOL1_CAP = "Holy"-- 	holy     = "Holy",				-- SPELL_SCHOOL1_CAP = "Holy"
+		}
+		lsLocale.zhCN.MOUNTED_BUFF_TT    = "速度提高"--"Increases speed"
+		
+		-- Dodge, parry, block, resist
+		lsLocale.zhCN.PLAYER_DODGE          = ".+发起了攻击。你闪躲开了。"--".+ attacks%. You dodge%."
+		lsLocale.zhCN.PLAYER_DODGE_SPELL    = ".+的.+被闪躲过去。"         --".+'s? .+ was dodged%."           -- GUESS
+		lsLocale.zhCN.PLAYER_PARRY          = ".+发起了攻击。你招架住了。"--".+ attacks%. You parry%."
+		lsLocale.zhCN.PLAYER_PARRY_SPELL    = ".+的.+被招架了。"          --".+'s? .+ was parried%."          -- GUESS
+		lsLocale.zhCN.PLAYER_BLOCK          = ".+发起了攻击。你格挡开了。"--".+ attacks%. You block%."
+		lsLocale.zhCN.PLAYER_BLOCK_SPELL    = ".+的.+被格挡过去。"         --".+'s? .+ was blocked%."          -- GUESS
+		lsLocale.zhCN.PLAYER_RESIST_SPELL   = ".+的.+被抵抗了。"--".+'s? .+ was resisted%."
+		lsLocale.zhCN.TARGET_DODGE          = "你发起了攻击。.+闪开了。"--"You attack%. .+ dodges%."
+		lsLocale.zhCN.TARGET_DODGE_SPELL    = "你的.+被.+躲闪过去了。"     --"Your .+ was dodged by .+%."      -- GUESS
+		lsLocale.zhCN.TARGET_PARRY          = "你发起了攻击。.+招架住了。"--"You attack%. .+ parries%."
+		lsLocale.zhCN.TARGET_PARRY_SPELL    = "你的.+被.+招架了。"     --"Your .+ was parried by .+%."     -- GUESS
+		lsLocale.zhCN.TARGET_BLOCK          = "你发起了攻击。.+格挡住了。"--"You attack%. .+ blocks%."
+		lsLocale.zhCN.TARGET_BLOCK_SPELL    = "你的.+被.+格档了。"     --"Your .+ was blocked by .+%."     -- GUESS
+		lsLocale.zhCN.TARGET_RESIST_SPELL   = "你的.+被.+抵抗了。"--"Your .+ was resisted by .+%."
+		
+		-- Warsong gulch announcements
+		lsLocale.zhCN.BG_WSG_ZONE = "战歌峡谷"--"Warsong Gulch"
+		lsLocale.zhCN.BG_WSG_FLAG_PICKED_UP = "The %s [fF]lag was picked up by (.+)!"
+		lsLocale.zhCN.BG_WSG_FLAG_CAPTURED = "captured the %s flag!"
+		lsLocale.zhCN.BG_WSG_FLAG_DROPPED = "The %s flag was dropped by"
+		lsLocale.zhCN.BG_WSG_FLAG_RETURNED = "The %s flag was returned to its base by"
+		
+		lsLocale.zhCN.DUEL_COUNTDOWN        = "决斗开始：(%d+)"--"Duel starting: (%d+)"
+		lsLocale.zhCN.DUEL_WINNER_KNOCKOUT  = "(.+)在决斗中战胜了(.+)"--"(.+) has defeated (.+) in a duel"
+		lsLocale.zhCN.DUEL_WINNER_RETREAT   = "(.+)在决斗中输给了(.+)"--"(.+) has fled from (.+) in a duel"
+		
+		lsLocale.zhCN.REMAINING = "剩余(%d+)分钟"--"(%d+) minutes remaining."
+		
+		lsLocale.zhCN.GANKED = "Ganked By: %s Count: %d"
+		
+		lsLocale.zhCN.GANKED_CHATS = {
+				"(.+)的.+对你造成(.+)点致命一击", --"(.+)'s .+ crits you for",  -- SPELLLOGCRITOTHERSELF = "%s's %s crits you for %d."
+				"(.+)的.+击中你造成",	--"(.+)'s .+ hits you for",	-- SPELLLOGOTHERSELF = "%s's %s hits you for %d."
+				"(.+)的致命一击对你造成", 		--"(.+) crits you for", 		-- COMBATHITCRITOTHERSELF = "%s crits you for %d.";
+				"(.+)击中你造成点(.+)伤害",--"(.+) hits you for", 		-- COMBATHITOTHERSELF = "%s hits you for %d.";
+		}
+		
+		-- NPC is fleeing
+		lsLocale.zhCN.NPC_FLEE_MSG = "%%s attempts to run away in fear!"
+		
+		-- When something is immune to your spell, such as poison etc.
+		lsLocale.zhCN.IMMUNE = "你的(.+)施放失败。(.+)对此免疫。"--"Your (.+) failed. (.+) is immune."
+		
+		-- These are creatures that cast divine protection on themselves
+		-- "Phasing" creature? Any ideas what this is from?
+		lsLocale.zhCN.IMMUNITYPROBLEMCREATURES = {
+				"血色",--"Scarlet",
+				"红衣",--"Crimson",
+				"相位",--"Phasing",
+				"杜安",--"Doan",
+				"古拉巴什",--"Gurubashi",
+				"指挥官斯普林瓦尔",--"Springvale",
+				"阿鲁高",--"Arugal",
+		}
+		
+		-- Localized instance names
+		lsLocale.zhCN.INSTANCES = {
+			"怒焰裂谷",--"Ragefire Chasm",
+			"死亡矿井",--"Deadmines",
+			"哀嚎洞穴",--"Wailing Caverns",
+			"影牙城堡",--"Shadowfang Keep",
+			"监狱",--"The Stockade",
+			"黑暗深渊",--"Blackfathom Deeps",
+			"诺莫瑞根",--"Gnomeregan",
+			"剃刀沼泽",--"Razorfen Kraul",
+			"血色修道院",--"Scarlet Monastery",
+			"剃刀高地",--"Razorfen Downs",
+			"奥达曼",--"Uldaman",
+			"玛拉顿",--"Maraudon",
+			"祖尔法拉克k",--"Zul'Farrak",
+			"阿塔哈卡神庙",--"The Temple of Atal'Hakkar",
+			"黑石深渊",--"Blackrock Depths",
+			"黑石塔",--"Blackrock Spire",
+			"斯坦索姆",--"Stratholme",
+			"厄运之槌",--"Dire Maul",
+			"通灵学院",--"Scholomance",
+			"奥妮克希亚的巢穴",--"Onyxia's Lair",
+			"安其拉废墟",--"Ruins of Ahn'Qiraj",
+			"祖尔格拉布",--"Zul'Gurub",
+			"熔火之心",--"Molten Core",
+			"黑翼之巢",--"Blackwing Lair",
+			"安其拉",--"Temple of Ahn'Qiraj",
+			"纳克萨玛斯",--"Naxxramas",
+		}
+		
+		-- Needed for many of the -ifTargetIs=Slowed etc.
+		lsLocale.zhCN.SLOWED_TTS = {
+			"移动减速",--"Movement slowed",
+			"移动速度降低",--"Movement speed slowed",         -- Hunter Frost Trap
+			"移动速度降低",--"Movement speed reduced",		 -- Wing Clip
+		}
+		
+		lsLocale.zhCN.STUNNED_TTS = {		 -- Cheapshot or kidneyshot
+		    "昏迷",--"Stunned",
+		}
+		-- Damage over time text like shadow word pain
+		lsLocale.zhCN.DOT_TTS = {
+			"在(.+)秒内造成累计(%d+)点伤害",--	"(.+) damage over (%d+) sec",
+			"每(.+)秒造成(%d+)点伤害",--	"(.+) damage every (%d+) sec",
+			"每(%d+)秒(.+)点",--	"(.+) damage inflicted every (%d+) sec", 		-- spell=29407
+		}
+		
+		lsLocale.zhCN.FEAR_TTS = {
+				"胁迫", --"Intimidated", 
+				"因恐惧而逃跑", --"Fleeing in [fF]ear", 	-- Intimidation
+				"恐惧地逃跑",--"Running in [fF]ear",	-- Psychic Scream
+				"恐惧",	--"Feared",				-- Fear
+			
+		}
+		lsLocale.zhCN.IMMOBILE_TTS = {
+				"固定",--"Immobilized",
+				"冻结。",--"Frozen in place",
+				"无法移动",--"Unable to move",     	 	-- Where is this from?
+				"定身",--"Rooted",
+		}
+		
+		lsLocale.zhCN.ASLEEP_TTS = {
+			"沉睡",--"Asleep",					-- Wyvern Sting
+		}
+		
+		lsLocale.zhCN.DISORIENTED_TTS = {
+			"困惑",--"Disoriented",				-- Scatter Shot
+		}
+		
+		lsLocale.zhCN.INCAPACITATED_TTS = {
+			"瘫痪",--"Incapacitated",			-- Gouge
+		}
+		
+		lsLocale.zhCN.BUFF_TTS = {
+			berserking           = "狂暴",--"Berserking",
+			bloodFury            = "血性狂暴",--"Blood Fury",
+			cannibalize          = "食尸",--"Cannibalize",
+			brainFood            = "补充营养",--"Brain Food",
+			dazed                = "眩晕",--"Dazed",
+			drink                = "喝水",--"Drink",
+			firstAid             = "急救",--"First Aid",
+			fishFood             = "进食",--"Food",
+			food                 = "进食",--"Food",
+			recentlyBandaged     = "新近包扎",--"Recently Bandaged",
+			shadowmeld           = "影遁",--"Shadowmeld",
+			silverwingFlag       = "银翼军旗",--"Silverwing Flag",
+			warsongFlag          = "战歌军旗",--"Warsong Flag",
+			wellFed              = "进食充分",--"Well Fed",
+			
+			--Rogue Buffs
+			adrenaline           = "冲动",--"Adrenaline Rush",
+			bladeFlurry          = "剑刃乱舞",--"Blade Flurry",
+			blind                = "致盲",--"Blind",
+			cs                   = "偷袭",--"Cheap Shot",
+			coldBlood            = "冷血",--"Cold Blood",
+			evasion              = "闪避",--"Evasion",
+			expose               = "破甲",--"Expose Armor",
+			garrote              = "绞喉",--"Garrote",
+			ghostly              = "鬼魅攻击",--"Ghostly Strike",
+			gouge                = "凿击",--"Gouge",
+			hemo                 = "出血",--"Hemorrhage",
+			ks                   = "肾击",--"Kidney Shot",
+			remorseless          = "冷酷",--"Remorseless",
+			rupture              = "割裂",--"Rupture",
+			sap                  = "闷棍",--"Sap",
+			snd                  = "切割",--"Slice and Dice",
+			stealth              = "潜行",--"Stealth",
+			vanish               = "消失",--"Vanish",
+			
+			--Priest Buffs
+			abolishDisease       = "驱除疾病",--"Abolish Disease",
+			devouringPlague      = "噬灵瘟疫",--"Devouring Plague",
+			divineSpirit         = "神圣之灵",--"Divine Spirit",
+			elunesGrace          = "艾露恩的赐福",--"Elune's Grace",
+			fade                 = "渐隐术",--"Fade",
+			fearWard             = "防护恐惧结界",--"Fear Ward",
+			feedback             = "回馈",--"Feedback",
+			hexWeakness          = "虚弱妖术",--"Hex of Weakness",
+			holyFire             = "神圣之火",--"Holy Fire",
+			innerFire            = "心灵之火",--"Inner Fire",
+			innerFocus           = "心灵专注",--"Inner Focus",
+			levitate             = "漂浮术",--"Levitate",
+			lightwell            = "光明之泉",--"Lightwell",
+			lightwellRenew       = "光明之泉回复",--"Lightwell Renew",
+			mindControl          = "精神控制",--"Mind Control",
+			mindFlay             = "精神鞭笞",--"Mind Flay",
+			mindSoothe           = "安抚心灵",--"Mind Soothe",
+			mindVision           = "心灵视界",--"Mind Vision",
+			powerInfusion        = "能量灌注",--"Power Infusion",
+			pwf                  = "真言术：韧",--"Power Word: Fortitude",
+			pws                  = "真言术：盾",--"Power Word: Shield",
+			prf                  = "坚韧祷言",--"Prayer of Fortitude",
+			prsp                 = "暗影防护祷言",--"Prayer of Shadow Protection",
+			prs                  = "精神祷言",--"Prayer of Spirit",
+			psychicScream        = "心灵尖啸",--"Psychic Scream",
+			renew                = "恢复",--"Renew",
+			shackleUndead        = "束缚亡灵",--"Shackle Undead",
+			shadowProtection     = "防护暗影",--"Shadow Protection",
+			swp                  = "暗言术：痛",--"Shadow Word: Pain",
+			shadowform           = "暗影形态",--"Shadowform",
+			shadowguard          = "暗影守卫",--"Shadowguard",
+			shadowVulnerability  = "暗影易伤",--"Shadow Vulnerability",
+			spiritTap            = "精神分流",--"Spirit Tap",
+			starshards           = "星辰碎片",--"Starshards",
+			touchWeakness        = "虚弱之触",--"Touch of Weakness",
+			vampiricEmbrace      = "吸血鬼的拥抱",--"Vampiric Embrace",
+			weakenedSoul         = "虚弱灵魂",	--"Weakened Soul",
+			
+			-- Warrior Buffs
+			battleShout          = "战斗怒吼",--"Battle Shout",
+			berserkerRage        = "狂暴之怒",--"Berserker Rage",
+			bloodrage            = "血性狂暴",--"Bloodrage",
+			challengingShout     = "挑战怒吼",--"Challenging Shout",
+			concussionBlow       = "震荡猛击",--"Concussion Blow",
+			deathWish            = "死亡之愿",--"Death Wish",
+			demoShout            = "挫志怒吼",--"Demoralizing Shout",
+			disarm               = "缴械",--"Disarm",
+			hamstring            = "断筋",--"Hamstring",
+			intimidatingShout    = "破胆怒吼",--"Intimidating Shout",
+			lastStand            = "破釜沉舟",--"Last Stand",
+			mockingBlow          = "惩戒痛击",--"Mocking Blow",
+			mortalStrike         = "致死打击",--"Mortal Strike",
+			piercingHowl         = "刺耳怒吼",--"Piercing Howl",
+			recklessness         = "鲁莽",--"Recklessness",
+			rend                 = "撕裂",--"Rend",
+			retaliation          = "反击风暴",--"Retaliation",
+			shieldBlock          = "盾牌格挡",--"Shield Block",
+			shieldWall           = "盾墙",--"Shield Wall",
+			sunder               = "破甲攻击",--"Sunder Armor",
+			sweepingStrikes      = "横扫攻击",--"Sweeping Strikes",
+			thunderClap          = "雷霆一击",--"Thunder Clap",
+			whirlwind            = "旋风斩",--"Whirlwind",
+			
+			-- Druid Buffs
+			bear                 = "熊形态",--"Bear Form",
+			aquatic              = "水栖形态",--"Aquatic Form",
+			cat                  = "猎豹形态",--"Cat Form",
+			travel               = "旅行形态",--"Travel Form",
+			direBear             = "巨熊形态",--"Dire Bear Form",
+			moonkin              = "枭兽形态",--"Moonkin Form",
+			
+			prowl                = "潜行",--"Prowl", 
+			rake                 = "扫击",--"Rake",
+			rip                  = "撕扯",--"Rip",
+			dash                 = "急奔",--"Dash",
+			pounce               = "血袭",--"Pounce Bleed",
+			tigersFury           = "猛虎之怒",--"Tiger's Fury",
+			
+			bash                 = "重击",--"Bash",
+			charge               = "野性冲锋效果",--"Feral Charge Effect",
+			demoralize           = "挫志咆哮",--"Demoralizing Roar",
+			enrage               = "狂怒",--"Enrage",
+			frenziedRegen        = "狂暴回复",--"Frenzied Regeneration",
+			
+			abolishPoison        = "驱毒术",--"Abolish Poison",
+			barkskin             = "树皮术",--"Barkskin",
+			faerieFire           = "精灵之火",--"Faerie Fire",
+			gotw                 = "野性赐福",--"Gift of the Wild",
+			grasp                = "自然之握",--"Nature's Grasp",
+			hibernate            = "休眠",--"Hibernate",
+			innervate            = "激活",--"Innervate",
+			moonfire             = "月火术",--"Moonfire",
+			motw                 = "野性印记",--"Mark of the Wild",
+			ns                   = "自然迅捷",--"Nature's Swiftness",
+			ooc                  = "清晰预兆",--"Omen of Clarity",
+			regrowth             = "愈合",--"Regrowth",
+			rejuv                = "回春术",--"Rejuvenation",
+			roots                = "纠缠根须",--"Entangling Roots",
+			soothe               = "安抚动物",--"Soothe Animal",
+			swarm                = "虫群",--"Insect Swarm",
+			thorns               = "荆棘术",--"Thorns",
+			tranquility          = "宁静",--"Tranquility",
+			
+			-- Hunter Buffs
+			aspectBeast          = "野兽守护",--"Aspect of the Beast",
+			aspectCheetah        = "猎豹守护",--"Aspect of the Cheetah",
+			aspectHawk           = "雄鹰守护",--"Aspect of the Hawk",
+			aspectPack           = "豹群守护",--"Aspect of the Pack",
+			aspectMonkey         = "灵猴守护",--"Aspect of the Monkey",
+			aspectWild           = "野性守护",--"Aspect of the Wild",
+			bestialWrath         = "狂野怒火",--"Bestial Wrath",
+			concussive           = "震荡射击",--"Concussive Shot",
+			eagleEye             = "鹰眼术",--"Eagle Eye",
+			eotb                 = "野兽之眼",--"Eyes of the Beast",
+			explosiveTrap        = "爆炸陷阱效果"--"Explosive Trap Effect",
+			feedPet              = "喂养宠物效果"--"Feed Pet Effect",
+			feign                = "假死",--"Feign Death",
+			frostTrap            = "冰霜陷阱光环"--"Frost Trap Aura",
+			freezingTrap         = "冰冻陷阱",--"Freezing Trap",
+			furiousHowl          = "狂怒之嚎",--"Furious Howl",
+			huntersMark          = "猎人印记",--"Hunter's Mark",
+			immolationTrap       = "献祭陷阱效果"--"Immolation Trap Effect",
+			intimidate           = "胁迫",--"Intimidation",
+			quickShots           = "快速射击",--"Quick Shots",
+			rapidFire            = "急速射击",--"Rapid Fire",
+			scare                = "恐吓野兽",--"Scare Beast",
+			scatter              = "驱散射击",--"Scatter Shot",
+			scorpid              = "毒蝎钉刺",--"Scorpid Sting",
+			serpent              = "毒蛇钉刺",--"Serpent Sting",
+			trueshot             = "强击光环",--"Trueshot Aura",
+			viper                = "蝰蛇钉刺",--"Viper Sting",
+			wingClip             = "摔绊",--"Wing Clip",
+			wyvern               = "翼龙钉刺",--"Wyvern Sting",
+			wyvernCC             = "翼龙钉刺",--"Wyvern Sting",
+			wyvernDot            = "翼龙钉刺",--"Wyvern Sting",
+			
+			-- Mage Buffs
+			amplifyMagic         = "魔法增效",--"Amplify Magic",
+			brilliance           = "奥术光辉",--"Arcane Brilliance",
+			combustion           = "燃烧",--"Combustion",
+			dampenMagic          = "魔法抑制",--"Dampen Magic",
+			evocation            = "唤醒",--"Evocation",
+			fireVulnerability    = "Fire Vulnerability",
+			fireWard             = "防护火焰结界",--"Fire Ward",
+			frostWard            = "防护冰霜结界",--"Frost Ward",
+			frostArmor           = "霜甲术",--"Frost Armor",
+			frostNova            = "冰霜新星"--"Frost Nova",
+			frostbite            = "霜寒刺骨"--"Frostbite", //中文名字待确认
+			frostbolt            = "寒冰箭",--"Frostbolt",
+			iceArmor             = "冰甲术",--"Ice Armor",
+			iceBarrier           = "寒冰护体",--"Ice Barrier",
+			iceBlock             = "寒冰屏障",--"Ice Block",
+			ignite               = "点燃",--"Ignite",
+			intellect            = "奥术智慧",--"Arcane Intellect",
+			mageArmor            = "魔甲术",--"Mage Armor",
+			manaShield           = "法力护盾",--"Mana Shield",
+			polymorph            = "变形术",--"Polymorph",
+			polymorphPig         = "变形术：猪",--"Polymorph: Pig",
+			polymorphTurtle      = "变形术：龟",--"Polymorph: Turtle",
+			
+			-- Paladin Buffs
+			concAura             = "专注光环",--"Concentration Aura",
+			devAura              = "虔诚光环",--"Devotion Aura",
+			fireAura             = "火焰抗性光环",--"Fire Resistance Aura",
+			retAura              = "惩罚光环",--"Retribution Aura",
+			sanctAura            = "圣洁光环",--"Sanctity Aura",
+			shadowAura           = "暗影抗性光环",--"Shadow Resistance Aura",
+			blessFree            = "自由祝福",--"Blessing of Freedom",
+			blessKings           = "王者祝福",--"Blessing of Kings",
+			blessLight           = "光明祝福",--"Blessing of Light",
+			blessMight           = "力量祝福",--"Blessing of Might",
+			blessProt            = "保护祝福",--"Blessing of Protection",
+			blessSac             = "牺牲祝福",--"Blessing of Sacrifice",
+			blessSlv             = "拯救祝福",--"Blessing of Salvation",
+			blessSnct            = "庇护祝福",--"Blessing of Sanctuary",
+			blessWisdom          = "智慧祝福",--"Blessing of Wisdom",
+			divFavor             = "神恩术",--"Divine Favor",
+			divProt              = "圣佑术",--"Divine Protection",
+			divShield            = "圣盾术",--"Divine Shield",
+			forbearance          = "自律",--"Forbearance",
+			gBlessKings          = "强效王者祝福",--"Greater Blessing of Kings",
+			gBlessLight          = "强效光明祝福",--"Greater Blessing of Light",
+			gBlessMight          = "强效力量祝福",--"Greater Blessing of Might",
+			gBlessSlv            = "强效拯救祝福",--"Greater Blessing of Salvation",
+			gBlessSnct           = "强效庇护祝福",--"Greater Blessing of Sanctuary",
+			gBlessWisdom         = "强效智慧祝福",--"Greater Blessing of Wisdom",
+			holyShield           = "神圣之盾",--"Holy Shield",
+			redoubt              = "盾牌壁垒",--"Redoubt",
+			repentance           = "忏悔",--"Repentance",
+			rightFury            = "正义之怒",--"Righteous Fury",
+			sealCommand          = "命令圣印",--"Seal of Command",
+			sealCrusader         = "十字军圣印",--"Seal of the Crusader",
+			sealJustice          = "公正圣印",--"Seal of Justice",
+			sealLight            = "光明圣印",--"Seal of Light",
+			sealRight            = "正义圣印",--"Seal of Righteousness",
+			sealWisdom           = "智慧圣印",--"Seal of Wisdom",
+			
+			judgeCrusader        = "十字军审判",--"Judgement of the Crusader",
+			judgeJustice         = "公正审判",--"Judgement of Justice",
+			judgeLight           = "圣光审判",--"Judgement of Light",
+			judgeWisdom          = "智慧审判",--"Judgement of Wisdom",
+			
+			-- Shaman buffs
+			lightShield          = "闪电之盾",--"Lightning Shield",
+			ghostwolf            = "幽魂之狼",--"Ghost Wolf",
+			
+			fireResistTotem      = "火焰抗性",--"Fire Resistance",
+			flameTotem           = "火舌",--"FlameTongue",
+			flameShock           = "烈焰震击",--"Flame Shock",
+			frostResistTotem     = "冰霜抗性",--"Frost Resistance",
+			graceTotem           = "风之优雅",--"Grace of Air",
+			hsTotem              = "治疗之泉",--"Healing Stream",
+			msTotem              = "法力之泉",--"Mana Spring",
+			mtTotem              = "法力之潮",--"Mana Tide",
+			natureResistTotem    = "自然抗性",--"Nature Resistance",
+			skinTotem            = "石肤术",--"Stoneskin",
+			strengthTotem        = "大地之力",--"Strength of Earth",
+			tranquilTotem        = "宁静之风",--"Tranquil Air",
+			wfTotem              = "风怒",--"Windfury",
+			windwallTotem        = "风墙",--"Windwall",
+			
+			-- Warlock buffs
+			amplifyCurse         = "诅咒增幅",--"Amplify Curse",
+			corruption           = "腐蚀术",--"Corruption",
+			curseAgony           = "痛苦诅咒",--"Curse of Agony",
+			curseElements        = "元素诅咒",--"Curse of the Elements",
+			curseExhaustion      = "疲劳诅咒",--"Curse of Exhaustion",
+			curseReckless        = "鲁莽诅咒",--"Curse of Recklessness",
+			curseShadow          = "暗影诅咒",--"Curse of Shadow",
+			curseTongues         = "语言诅咒",--"Curse of Tongues",
+			curseWeakness        = "虚弱诅咒",--"Curse of Weakness",
+			banish               = "放逐术",--"Banish",
+			deathCoil            = "死亡缠绕",--"Death Coil",
+			demonArmor           = "魔甲术",--"Demon Armor",
+			demonSkin            = "恶魔皮肤",--"Demon Skin",
+			detectGreaterInvis   = "侦测强效隐形",--"Detect Greater Invisibility",
+			detectInvis          = "侦测隐形",--"Detect Invisibility",
+			detectLesserInvis    = "侦测次级隐形",--"Detect Lesser Invisibility",
+			drainLife            = "吸取生命",--"Drain Life",
+			drainMana            = "吸取法力",--"Drain Mana",
+			drainSoul            = "吸取灵魂",--"Drain Soul",
+			fear                 = "恐惧术",--"Fear",
+			funnel               = "生命通道",--"Health Funnel",
+			hellfire             = "地狱烈焰",--"Hellfire",
+			howl                 = "恐惧嚎叫",--"Howl of Terror",
+			immolate             = "献祭",--"Immolate",
+			sacrifice            = "牺牲",--"Sacrifice",
+			seduction            = "诱惑",--"Seduction",
+			senseDemons          = "感知恶魔",--"Sense Demons",
+			shadowburn           = "暗影灼烧",--"Shadowburn",
+			shadowTrance         = "暗影冥思",--"Shadow Trance",
+			shadowWard           = "防护暗影结界",--"Shadow Ward",
+			siphon               = "生命虹吸",--"Siphon Life",
+			soulLink             = "灵魂链接",--"Soul Link",
+			
+			-- Pet related
+			petProwl             = "潜行",--"Prowl",
+			
+			-- Other
+			
+			clearcasting         = "节能施法",--"Clearcasting",
+			
+		}
+		
+		lsLocale.zhCN.BUFF_BODY_TTS = {
+			wyvernCC             = "沉睡",--"Asleep",
+			wyvernDot            = "钉刺会在(.+)秒内对其造成(%d+)点(.+)伤害"--"(.+) damage every (%d+) sec(.+)."
+		}
+		
+		
+		-- Action names
+		-- Since this table is appended to by the class specific addons, we have to
+		-- write out each line
+		lsLocale.zhCN.ACTION_TTS = {}
+		lsLocale.zhCN.ACTION_TTS.berserking       = "狂暴"--"Berserking"
+		lsLocale.zhCN.ACTION_TTS.bloodFury        = "血性狂暴"--"Blood Fury"
+		lsLocale.zhCN.ACTION_TTS.cannibalize      = "食尸"--"Cannibalize"
+		lsLocale.zhCN.ACTION_TTS.escapeArtist     = "逃命专家"--"Escape Artist"
+		lsLocale.zhCN.ACTION_TTS.findTreasure     = "寻找财宝"--"Find Treasure"
+		lsLocale.zhCN.ACTION_TTS.perception       = "感知"--"Perception"
+		lsLocale.zhCN.ACTION_TTS.stoneForm        = "石像形态"--"Stoneform"
+		lsLocale.zhCN.ACTION_TTS.shadowmeld       = "影遁"--"Shadowmeld"
+		lsLocale.zhCN.ACTION_TTS.warStomp         = "战争践踏"--"War Stomp"
+		lsLocale.zhCN.ACTION_TTS.forsaken         = "亡灵意志"--"Will of the Forsaken"
+		lsLocale.zhCN.ACTION_TTS.bow              = "弓射击"--"Shoot Bow"
+		lsLocale.zhCN.ACTION_TTS.crossbow         = "弩射击"--"Shoot Crossbow"
+		lsLocale.zhCN.ACTION_TTS.gun              = "枪械射击"--"Shoot Gun"
+		lsLocale.zhCN.ACTION_TTS.throw            = "投掷"--"Throw"
+		lsLocale.zhCN.ACTION_TTS.petFollow        = "跟随"--"Follow"
+		lsLocale.zhCN.ACTION_TTS.petStay          = "停留"--"Stay"
+		lsLocale.zhCN.ACTION_TTS.petAggressive    = "攻击型"--"Aggressive"
+		lsLocale.zhCN.ACTION_TTS.petDefensive     = "防御型"--"Defensive"
+		lsLocale.zhCN.ACTION_TTS.petPassive       = "被动型"--"Passive"
+		lsLocale.zhCN.ACTION_TTS.findHerbs        = "寻找草药"--"Find Herbs"
+		lsLocale.zhCN.ACTION_TTS.findMinerals     = "寻找矿物"--"Find Minerals"
+		
+		-- About.lua
+		ABOUT_ALL_ROPE = "All the rope you need..."
+		ABOUT_BROUGHT = "Brought to you by:"
+		ABOUT_SIGNIFICANT_CONTRIBUTIONS = "With significant contributions by:"
+		ABOUT_TO_USE = "To use LazyScript, place a macro with the following on your action bar and repeatedly hit the macro in battle:"
+		ABOUT_SEE_WEBSITES = "Please see the following websites for documentation, discussion and new releases:"
+		ABOUT_LAZYCONTRIBUTORS = "LazyContributors"
+		ABOUT_ALL_TESTING = "All the testing we need..."
+		ABOUT_MANY_THANKS = "Many thanks to:"
+		
+		-- About.xml
+		About = "About"
+		Contributors = "Contributors"
+		
+		-- Actions.lua
+		ACTION = "The action "
+		NOT_SUPPORTED_PLS_USE = " is not supported for your locale. Please use 'action=<full action name>' instead."
+		ERROR_TYPE_TEXTURE = "Holy flying unknown texture type, Batman!"
+		FOUND = "found "
+		AT_SLOT = " at slot "
+		COULDNT_FIND = "Couldn't find \""
+		ADD_IT_PLAYER = "\" on your action bar, PLEASE ADD IT."
+		SPELLSEARCH_FOUND_NIL_TEXTURE = "SpellSearch found nil texture at index "
+		SPELLSEARCH_FOUND = "SpellSearch found "
+		AT_INDEX = " at index "
+		SPELLSEARCH_QUANTITY = "SpellSearch found more than 1000 spells."
+		RANK_COUNT = ". Rank Count = "
+		RANK_COUNT_2 = "rankCount = "
+		TEXTURE = ", texture = "
+		SPELLSEARCH_STOP = "SpellSearch stopped finding "
+		SPELLSEARCH_FOUND_NIL_NAME = "SpellSearch found nil name at index "
+		ACTION_1 = "Action: "
+		IN_SPELL_BOOK = "\" in your spell book."
+		ATTEMPTING_TO_CAST = "Attempting to cast "
+		ITEM_EQUIPPED = "Item is already equipped."
+		ITEM_NOT_FOUND = "Item not found: "
+		USING_ITEM = "Using item: "
+		AT_EQUIPPED_SLOT = ") at equipped slot: "
+		AT_BAG_SLOT = ") at bag/slot slot: "
+		WEAPON_BUFF_BAG_SLOT_NOT_FOUND = "Weapon buff bag slot not found. WTF?"
+		APPLYWEAPONBUFF = "ApplyWeaponBuff: Item "
+		IN = " in "
+		ITEM_TYPE_IS_NOT_WEAPON = " item type is not a Weapon: "
+		ISITEMSTILLHERE_NOT_FOUND = "IsItemStillHere: Found item "
+		AT_BAG_SLOT_1 = " at Bag/Slot: "
+		SEARCHBAGS_FOUND = "SearchBags: Found item "
+		ASSISTING = "Assisting "
+		ASSIST_TARGET_NOT_SET = "Assist target not set. Please set with /lazyscript assist <assist name>"
+		CANNOT_FIND = "Cannot find "
+		IN_GROUP_OR_RAID_TO_ASSIST = " in group or raid to assist. Please update with /lazyscript assist <assist name>"
+		CANNOT_ASSIST_DEAD = " seems to be dead, cannot assist."
+		CANNOT_ASSIST_RANGE = " seems to be out of range, cannot assist."
+		TARGET_IS_DEAD_SKIP = "'s target is dead, skipping to next action"
+		STOPPING_AUTO_ATTACK = "Stopping auto-attack..."
+		STOPPING_AUTO_SHOOT = "Stopping Shoot..."
+		STOPPING_AUTO_SHOT = "Stopping Auto Shot..."
+		NO_SHAPESHIFT_FORMS_AVAILABLE = "No shapeshift forms available."
+		SHAPESHIFT_FORM = "Shapeshift form: "
+		NOT_FOUND = " not found."
+		FOUND_PET_ACTION = "Found pet action "
+		ADD_IT_PET = "\" on your pet action bar, PLEASE ADD IT."
+		PET_ACTION = "Pet action: "
+		NOT_HAVE_PET_BAR = "You do not have a pet action bar."
+		NOT_HAVE_PET = "You do not have a pet."
+		COULD_NOT_CALL_FORM = "Could not call form "
+		TRY_ACTION = "Try: Action #"
+		
+		-- AutoAttack.lua
+		COULDNT_FIND_ATTACK = "Couldn't find Attack action on your action bar, PLEASE ADD IT." 
+		INITIATING_AUTO_ATTACK = "Initiating auto-attack..."
+		FOUND_AUTO_SHOT = "Found Auto Shot action at slot "
+		COULDNT_FIND_AUTO_SHOT = "Couldn't find Auto Shot action on your action bar, PLEASE ADD IT."
+		FOUND_SHOOT_WAND = "Found Shoot Wand action at slot "
+		COULDNT_FIND_SHOOT_WAND = "Could not find Shoot Wand action on your action bar, PLEASE ADD IT."
+		
+		-- Deathstimator.lua
+		YOURE_NOT_IN_COMBAT = "You're not in combat, and the death thing's showing, so I'm hiding it"
+		YOURE_IN_COMBAT = "You're IN combat, and the death thing's hidden, so I'm showing it"
+		GATHERING = "...gathering..."
+		RECALIBRATING = "...recalibrating..."
+		DEATH_IN = "Death in "
+		S = "s"
+		DEATHSTIMATOR = "Deathstimator"
+		DEATHSTIMATOR_TOOLTIP = "Shift + Left Click to move me around."
+		
+		-- FormEdit.lua
+		FORM = "Form "
+		TESTING = "Testing "
+		FORM_1 = " form..."
+		TESTING_COMPLETED = "Testing completed."
+		
+		TAB_OVERVIEW_1 = "<H1>Overview</H1>"
+		TAB_OVERVIEW_2 = "<P>LazyScript is a scripting language for World of Warcraft that is able to execute certain attacks or abilities under conditions that you specify. This is accomplished by writing a \"form\", which consists of a series of actions and criteria. When the LazyScript macro is run, the LazyScript engine will read through the list of actions from top to bottom until it finds an action that is ready to be used and then executes it.</P>"
+		TAB_OVERVIEW_3 = "<P>Any line may be commented out by placing '--', '//', or '#' at the start of the line.</P>"
+		TAB_OVERVIEW_TUTORIAL_1_1 = "<H1>Tutorial 1: Baby steps</H1>"
+		TAB_OVERVIEW_TUTORIAL_1_2 = "<P>For example, let us make LazyScript execute Sinister Strike. First, check what the short name is for Sinister Strike in the actions tab. We see that it is \"ss\". Now choose \"Create New Form\" from the LazyScript minimap menu. Give your form a name like \"MyForm\" and type:</P>" 
+		TAB_OVERVIEW_TUTORIAL_1_3 = "<P>Click on the \"Test\" button. If everything is okay and there were no typos, a \"Testing completed\" message will appear in your chat box. If there were errors, a summary of the error will be printed in the chat box instead. If everything is working then click on the \"Okay\" button. You should now see the form \"MyForm\" in the LazyScript minimap form list. Click on \"MyForm\" to set it as the default. A little check mark should appear next to \"MyForm\" on the minimap menu.</P>"
+		TAB_OVERVIEW_TUTORIAL_1_4 = "<P>Now create a macro with the command:</P>"
+		TAB_OVERVIEW_TUTORIAL_1_5 = "<P>and place it on your action bar. Also place the highest rank of \"Sinister Strike\" on your action bar somewhere. The \"Sinister Strike\" action need not be visible. Now go out and fight something and hit your LazyScript macro key and LazyScript will automatically execute Sinister Strike.</P>"
+		TAB_OVERVIEW_TUTORIAL_2_1 = "<H1>Tutorial 2: Now we're getting somewhere</H1>"
+		TAB_OVERVIEW_TUTORIAL_2_2 = "<P>|cffffaaff\"That's not particularly impressive\"|r</P>"
+		TAB_OVERVIEW_TUTORIAL_2_3 = "<P>Well, let us move onto something more interesting then. Let us include an action that we can not execute all the time like \"Riposte\". We always prefer to execute riposte rather than sinister strike, but riposte is not always usable. Edit \"MyForm\" and add riposte before sinister strike, like so:</P>"
+		TAB_OVERVIEW_TUTORIAL_2_4 = "<P>and place Riposte on your action bar somewhere. Now when you hit the LazyScript macro during combat, LazyScript will execute Sinister Strike until you parry an attack. Once that happens, LazyScript will execute Riposte when you next hit the LazyScript macro button. Most importantly, it will do all this without the \"That action is not ready yet\" spam that you would normally have to put up with when using a standard macro.</P>"
+		TAB_OVERVIEW_TUTORIAL_3_1 = "<H1>Tutorial 3: To do or not to do, that is the question</H1>"
+		TAB_OVERVIEW_TUTORIAL_3_2 = "<P>One of the most useful features of LazyScript is the ability to associate conditions or criteria with a particular action. For example, you only want to kick the target if it is casting a spell. Looking at the criteria tab we notice that there is a condition \"-if[Not]TargetIsCasting\" plus some other scary looking stuff. Let us ignore the complicated stuff for now and just use \"-ifTargetIsCasting\". Interrupting a spell is more important than using Riposte, so edit \"MyForm\" and change it to:</P>"
+		TAB_OVERVIEW_TUTORIAL_3_3 = "<P>Now LazyScript will only kick if it detects that the target is casting a spell.</P>"
+		TAB_OVERVIEW_TUTORIAL_3_4 = "<P>|cffffaaff\"But what if I only want to interrupt fire spells?\"|r</P>"
+		TAB_OVERVIEW_TUTORIAL_3_5 = "<P>Well that is what the rest of that complicated string is all about. Edit \"MyForm\" and change the form to:</P>"
+		TAB_OVERVIEW_TUTORIAL_3_6 = "<P>|cffffaaff\"What about if I only want to interrupt fire or frost spells? Do I have to type that all out again?\"|r</P>"
+		TAB_OVERVIEW_TUTORIAL_3_7 = "<P>Nope, change \"MyForm\" to:</P>"
+		TAB_OVERVIEW_TUTORIAL_3_8 = "<P>|cffffaaff\"I'm decked out in MC gear. The only spells I care about interrupting are heals. Darn priests... *mutter*\"|r</P>"
+		TAB_OVERVIEW_TUTORIAL_3_9 = "<P>We have that covered too. Just use the full text string, correctly capitalized with spaces:</P>"
+		TAB_OVERVIEW_TUTORIAL_4_1 = "<H1>Tutorial 4: Why'd you have to go and make things so complicated?</H1>"
+		TAB_OVERVIEW_TUTORIAL_4_2 = "<P>Probably the most complex criteria you will come across are the buff/debuff checking criteria. They are so complex because they are so flexible. For instance, if you only want to renew your Slice and Dice if you do not already have it running. First check the Buff/Debuff tab and find out what the short buff/debuff name is for Slice and Dice. It is \"snd\", so add a line to your form that has:</P>"
+		TAB_OVERVIEW_TUTORIAL_4_3 = "<P>If you only want to use Rupture on your target if it does not already have rupture active:</P>"
+		TAB_OVERVIEW_TUTORIAL_4_4 = "<P>|cffffaaff\"Why don't I see buff/debuff xyz in your list?\"|r</P>"
+		TAB_OVERVIEW_TUTORIAL_4_5 = "<P>Although we try to be as thorough as possible with class abilities, if we were to have entries for every single buff in the game it would take up too much memory. If a buff is not in the list of recognised buffs/debuffs it is still possible to search for the title of the buff. Just use the following criteria and type in the full name of the buff or debuff with capitalization and spacing as it appears in the tooltip text:</P>"
+		TAB_OVERVIEW_TUTORIAL_4_6 = "<P>|cffffaaff\"My tanks are boring and they tell me not to start attacking the mob until they've sundered it a few times. Can LazyScript help me?\"|r</P>"
+		TAB_OVERVIEW_TUTORIAL_4_7 = "<P>LazyScript is also able to check how many applications of a buff or debufff there are. After prying out that by \"few\" they mean \"at least 3\", you can add something like this to the top of your form:</P>"
+		TAB_OVERVIEW_TUTORIAL_5_1 = "<H1>Tutorial 5: Multi-tasking</H1>"
+		TAB_OVERVIEW_TUTORIAL_5_2 = "<P>By now you may have noticed that some actions on the actions tab are colored green. Hopefully you read the help text and know that this has something to with multiple actions that do not trigger the global cooldown. What it boils down to is that you can chain any number of these actions together in one line along with at most one action that does trigger the global cooldown and LazyScript will execute them in sequence. For example, activate Cold Blood, use Eviscerate and provide a cute parting message:</P>"
+		TAB_OVERVIEW_TUTORIAL_5_3 = "<P>Here are a few more examples</P>"
+		TAB_OVERVIEW_TUTORIAL_6_1 = "<H1>Tutorial 6: Form re-use</H1>"
+		TAB_OVERVIEW_TUTORIAL_6_2 = "<P>So you've written some forms and they're starting to get a little long and complicated. If they contain sections which are identical, you can separate that section out into another form and use |cffff770CincludeForm|r to include it in the other forms. For example:</P>"
+		TAB_OVERVIEW_TUTORIAL_6_FORM_INT = "<P>Form \"Interrupts\":</P>"
+		TAB_OVERVIEW_TUTORIAL_6_FORM_FA = "<P>Form \"FrontAttack\":</P>"
+		TAB_OVERVIEW_TUTORIAL_6_FORM_BA = "<P>Form \"BehindAttack\":</P>"
+		TAB_OVERVIEW_TUTORIAL_6_3 = "<P>This will include the Interrupts form at the beginning of both the FrontAttack and BehindAttack forms as if you had copy and pasted it in there. When you change the contents of the Interrupts form, it will automatically update the FrontAttack and BehindAttack forms to include the new version.</P>"
+		TAB_OVERVIEW_TUTORIAL_6_4 = "<P>|cffffff00Note:|r Be careful that you don't try to include a form into itself, or try to include a form which includes the first form (A includes B includes A). Those will cause a stack overflow error because they're infinite recursion loops.</P>"
+		TAB_OVERVIEW_TUTORIAL_6_5 = "<P>Now perhaps you have some actions that you only want to perform under certain conditions but don't want the whole list of actions to be checked every time you press your LazyScript button. If we look at the previous example, we can see that ifTargetIsCasting is a criteria common to all of the actions in the Interrupts form. Using callForm we could rewrite the previous example like so:</P>"
+		TAB_OVERVIEW_TUTORIAL_6_6 = "<P>With these changes, when you execute FrontAttack or BehindAttack, it will call the Interrupts form only if the target is casting and not stunned. So if the target is not casting, it won't even check any of the actions/criteria in the Interrupts form.</P>"
+		
+		TAB_LIST_ACTIONS = "<H1>List of known Spells/Actions</H1>"
+		TAB_ACTIONS_SYNTAX_SPECIFIC_SPELL_RANK = "<BR/><P>A specific spell rank can be directed at a particular unit using the syntax:</P>"
+		TAB_ACTIONS_SYNTAX_SPECIFIC_SPELL_RANK_1 = "<BR/><P>The |cff00ffff&lt;UnitId&gt;|r can be any valid UnitId sequence as described in &lt;|cff8080ffhttp://www.wowwiki.com/UnitId|r&gt;. For example, @player, @pet, @target, @targettarget. Note that the rank of the spell must always appear before the '@' symbol.</P>"
+		TAB_ACTIONS_GREEN_ACTIONS = "<BR/><P>Actions in |cff40ff40green|r do not trigger the global cooldown. LazyScript is able to perform multiple of these actions on a single line provided that the line has at most one action that triggers the global cooldown.</P><BR/>"
+		TAB_ACTIONS_COMBO = "<H2>Combo Actions</H2>"
+		TAB_ACTIONS_OTHER = "<H2>Other Actions</H2>"
+		TAB_ACTIONS_SPECIAL = "<H2>Special Actions</H2>"
+		TAB_ACTIONS_PARAMETERS = "<H2>Actions that take parameters</H2>"
+		TAB_ACTIONS_PARAMETERS_1 = "<P>|cffffffffUse an action:|r<BR/> action=&lt;action/macro name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_2 = "<P>|cffffffffUse an action that does not trigger the global cooldown:|r<BR/> |cff40ff40freeAction|r=&lt;action/macro name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_3 = "<P>|cffffffffUse a pet action:|r<BR/> |cff40ff40petAction|r=&lt;action&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_4 = "<P>|cffffffffUse an item in your equipment or inventory:|r<BR/> use=&lt;itemid/item name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_5 = "<P>|cffffffffUse an item only if it is equipped:|r<BR/> useEquipped=&lt;itemid/item name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_6 = "<P>|cffffffffUse an item in your equipment or inventory that does not trigger the global cooldown:|r<BR/> useFreeItem=&lt;itemid/item name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_7 = "<P>|cffffffffUse an item that does not trigger the global cooldown only if it is equipped:|r<BR/> useFreeEquippedItem=&lt;itemid/item name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_8 = "<P>|cffffffffApply an item weapon buff:|r<BR/> apply{MainHand,OffHand}Buff=&lt;itemid/item name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_9 = "<P>|cffffffffEquip a weapon in your main hand:|r<BR/> equipMainHand=&lt;itemid/item name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_10 = "<P>|cffffffffEquip a weapon in your off hand:|r<BR/> equipOffHand=&lt;itemid/item name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_11 = "<P>|cffffffffEcho the message to your chat:|r<BR/> |cff40ff40echo|r=&lt;message&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_12 = "<P>|cffffffffSay the message in the specified channel:|r<BR/> |cff40ff40sayIn{|cff40ff40Emote, Guild, Minion, Party, Raid, RAID_WARNING, Say, Yell|r}|cff40ff40|r=&lt;message&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_13 = "<P>|cffffffffWhisper the message to the specified player or unitId:|r<BR/> |cff40ff40whisperTo|r{|cff40ff40playerName, |cff00ffff&lt;UnitId&gt;|r}|cff40ff40|r=&lt;message&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_14 = "<P>|cffffffffCancel the specified buff:|r<BR/> |cff40ff40cancelBuff|r=&lt;buff&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_15 = "<P>|cffffffffCancel the specified buff by title:|r<BR/> |cff40ff40cancelBuffTitle|r=&lt;buffTitle&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_16 = "<P>|cffffffffSet the specified form as the default:|r<BR/> |cff40ff40setForm|r=&lt;form name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_17 = "<P>|cffffffffTarget a specific unit:|r<BR/> |cff40ff40targetUnit|r=|cff00ffff&lt;UnitId&gt;|r</P>"
+		TAB_ACTIONS_PARAMETERS_18 = "<P>|cffffffffCast a spell on a specific unit:|r<BR/> |cff40ff40spellTargetUnit|r=|cff00ffff&lt;UnitId&gt;|r</P>"
+		TAB_ACTIONS_PARAMETERS_19 = "<P>|cffffffffTarget a player/creature by their exact name:|r<BR/> |cff40ff40targetByName|r=&lt;exact name&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_20 = "<P>|cffffffffPerform emote (See |cff8080ffhttp://www.wowwiki.com/API_TYPE_Emotes_Token|r|cffffffff):|r<BR/> |cff40ff40doEmote|r=&lt;emoteToken&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_21 = "<P>|cffffffffPlay sound (See |cff8080ffhttp://www.wowwiki.com/API_PlaySound|r|cffffffff):|r<BR/> |cff40ff40playSound|r=&lt;soundName&gt;</P>"
+		TAB_ACTIONS_PARAMETERS_22 = "<H2>Meta-Actions</H2>"
+		TAB_ACTIONS_PARAMETERS_23 = "<P>|cffffffffInclude the contents of the specified form:|r<BR/> includeForm=&lt;form name&gt;<BR/>"
+		TAB_ACTIONS_PARAMETERS_24 = "|cffffff00Note:|r This does not accept criteria. It must appear on a line by itself. You cannot include a form in itself, nor should you include a form which includes another form which includes the first (e.g. form A includes form B includes form A == BAD).</P>"
+		TAB_ACTIONS_PARAMETERS_25 = "<P>|cffffffffCall the specified form:|r<BR/> callForm=&lt;form name&gt;<BR/>"
+		TAB_ACTIONS_PARAMETERS_26 = "This will try to find a usable action in the specified form, if the criteria on the callForm action are satisfied.</P>"
+		
+		TAB_LIST_CRITERIA = "<H1>List of recognised criteria</H1>"
+		TAB_CRITERIA_1 = "<BR/><P>Append zero or more criteria to an action.  All criteria must be true for that action to be used.  List your actions one after another on separate lines.  The first action that matches all criteria is used.</P>"
+		TAB_CRITERIA_2 = "<BR/><P>Multiple values within curly braces ({}) means choose one or more.  If more than one is chosen, separate them with commas (e.g. ifRace=Human,Gnome) and the criteria will match if any of the choices match.  If a multiple-choice criteria is negated with a \"Not\" (e.g. ifNotRace=Human,Gnome) then the criteria will match only if none of the choices match.  Square brackets ([]) mean the value is optional.  Do NOT leave the curly braces or square brackets in your form.</P>"
+		TAB_CRITERIA_ACTION = "<H2>Action Criteria:</H2>"
+		TAB_CRITERIA_SEE_NOTE = "see note"
+		TAB_CRITERIA_ATTACK = "<H2>Attack Criteria:</H2>"
+		TAB_CRITERIA_BUFF_DEBUFF = "<H2>Buff/Debuff Criteria:</H2>"
+		TAB_CRITERIA_PLAYER_ONLY = "player only"
+		TAB_CRITERIA_SEE_NOTES = "see notes"
+		TAB_CRITERIA_AND = "and"
+		TAB_CRITERIA_ITEM = "<H2>Item Criteria:</H2>"
+		TAB_CRITERIA_PLAYER = "<H2>Player Criteria:</H2>"
+		TAB_CRITERIA_PARTY_OR_RAID = "party or raid"
+		TAB_CRITERIA_PVP_ONLY = "PvP only"
+		TAB_CRITERIA_PET = "<H2>Pet:</H2>"
+		TAB_CRITERIA_PARTY_PET_TARGET = "<H2>Player, Pet or Target Criteria:</H2>"
+		TAB_CRITERIA_DEFAULT = "defaults to &lt;5s, "
+		TAB_CRITERIA_TARGET = "<H2>Target Criteria:</H2>"
+		TAB_CRITERIA_NPC_ONLY = "NPC only"
+		TAB_CRITERIA_WITHIN = "Within"
+		TAB_CRITERIA_YARDS = "yards"
+		TAB_CRITERIA_NOT_WORK_BOSS = "Does not work for bosses"
+		TAB_CRITERIA_CUSTOM_HELP_1 = "<P>|cffffff00Note 1:|r To use -if{Ctrl,Alt,Shift}Down, you MUST remove any existing Ctrl/Alt/Shift key bindings from the Main Menu, Key Bindings. Otherwise the game will intercept the key and LazyScript will not see it.</P>"
+		TAB_CRITERIA_CUSTOM_HELP_2 = "<P>|cffffff00Note 2:|r Always use with -if[Not]TargetFriend since it will return true if the target is not a valid target for the spell.</P>"
+		TAB_CRITERIA_CUSTOM_HELP_3 = "<P>|cffffff00Note 3:|r Within X.Y sec, defaults to 0.3.</P>"
+		TAB_CRITERIA_CUSTOM_HELP_4 = "<P>|cffffff00Note 4:|r The buff/debuff name must be the full name (including capitalization and spaces) of the buff/debuff title as it appears in the tooltip.</P>"
+		TAB_CRITERIA_CUSTOM_HELP_5 = "<P>|cffffff00Note 5:|r XX refers to the number of buff/debuff applications. e.g. -ifTargetHasDebuff&lt;5=sunder</P>"
+		TAB_CRITERIA_CUSTOM_HELP_6 = "<P>|cffffff00Note 6:|r As of patch 1.12 this only works on unfriendly targets for Rogue (Sinister Strike), Druid (Growl), Hunter (Wing Clip) and Warrior (Rend).</P>"
+		TAB_CRITERIA_CUSTOM_HELP_7 = "<P>|cffffff00Note 7:|r The ifUsable criteria checks if the action is valid for use at present as per the Blizzard API call IsUsableAction. This does not include cooldown or range checking.</P>"
+		TAB_CRITERIA_CUSTOM_HELP_8 = "<P>|cffffff00Note 8:|r The ifGlobalCooldown criteria requires a specific action to be placed on your action bar so that it may be checked for the global cooldown. It does not have to be on a visible action bar. For each class, the actions are as follows:</P>"
+		TAB_CRITERIA_CUSTOM_HELP_8_CLASSES = "<P>Rogue: |cffffffffSinister Strike|r<BR/>Druid: |cffffffffMark of the Wild|r<BR/>Hunter: |cffffffffTrack Beasts|r<BR/>Priest: |cffffffffPower Word: Fortitude|r<BR/>Warrior: |cffffffffBattle Shout|r<BR/>Mage: |cffffffffFrost Armor|r<BR/>Warlock: |cffffffffDemon Skin|r<BR/>Shaman: |cffffffffRockbiter Weapon|r<BR/>Paladin: |cffffffffSeal of Righteousness|r</P>"
+		TAB_CRITERIA_CUSTOM_HELP_9 = "<P>|cffffff00Note 9:|r The |cff00ffff&lt;UnitId&gt;|r can be any valid UnitId sequence as described in &lt;|cff8080ffhttp://www.wowwiki.com/UnitId|r&gt;. For example, player, pet, target, targettarget. Capitalization is not important.</P>"
+		TAB_CRITERIA_CUSTOM_HELP_10 = "<P>|cffffff00Note 10:|r The ifLastUsed timer will perform the action immediately at the start of combat or if you changed targets if the action is available. The ifTimer criteria will first countdown XX seconds after initiating combat or changing targets before performing the action for the first time.</P>"
+		TAB_CRITERIA_CUSTOM_HELP_11 = "<P>|cffffff00Note 11:|r This criteria only detects full blocks and resists. A partial block or resist (\"Joe hits you for 10 damage (5 blocked).\") either on the player or the target will NOT be detected by this criteria.</P>"
+		
+		TAB_LIST_BUFFS_DEBUFFS = "<H1>List of known Buffs/Debuffs</H1>"
+		TAB_BUFFS_DEBUFFS_USED = "<BR/><P>Used with \"if[Not]{Player,Pet,Target}Has{Buff,Debuff}\" and \"if[Not]{Buff,Debuff}Duration{&lt;,&gt;}XXs\".</P><BR/>"
+		TAB_FULL_SHORT_NAME = "<H2>Full Name = Short Name</H2>"
+		
+		-- FormEdit.xml
+		LazyScript_Form_Editor = "LazyScript Form Editor"
+		Editing_form = "Editing form:"
+		Help = "Help"
+		Cancel = "Cancel"
+		Okay = "Okay"
+		Test = "Test"
+		LazyScript_Help = "LazyScript Help"
+		Overview = "Overview"
+		Actions = "Actions"
+		Criteria = "Criteria"
+		Buffs_Debuffs = "Buffs/Debuffs"
+		
+		-- Immunity.xml
+		--Cancel = "Cancel"
+		--Help = "Help"
+		--Okay = "Okay"
+		Immunities_Criteria_Editor = "Immunities Criteria Editor"
+		Shows_all_learned_immunities = "The following shows all learned immunities so far..."
+		
+		-- ImmunityTypeTracking.lua
+		IMMUNITY_TRACKING_NOT_SUPPORTED = "Immunity tracking is not supported for your locale."
+		IMMUNITY_TRACKING_NOT_100 = "Immune tracking is not 100% supported for your locale."
+		IMMUNITY_DETECTED = "IMMUNITY DETECTED! Spell: "
+		IMMUNITY_CREATURE = "      Creature: "
+		IMMUNITY_TYPE_TRACKING_NOT_SUPPORTED = "Spell type immunity tracking is not supported for your locale."
+		COULD_NOT_DETERMINE_SPELLTYPE = "Could not determine spelltype from: "
+		NEW_SPELL_TYPE_DETECTED = "New spell type detected. Spell: "
+		TYPE = " Type: "
+		GLOBAL_IMMUNITY_CRITERIA_UPDATED = "Global immunity criteria updated."
+		
+		-- Interrupt.lua
+		INTERRUPTS_NOT_SUPPORTED = "Interrupts are not supported for your locale."
+		DETECTED_YOUR_TARGET = "Detected your target is casting "
+		SUGGEST_INTERRUPT = ", will suggest Interrupt."
+		IS_CASTING = " is casting "
+		GLOBAL_INTERRUPT_CRITERIA_UPDATED = "Global interrupt criteria updated."
+		
+		-- Interrupt.xml
+		--Cancel = "Cancel"
+		--Help = "Help"
+		--Okay = "Okay"
+		Interrupt_EXCEPTION_Criteria_Editor = "Interrupt EXCEPTION Criteria Editor"
+		NOT_INTERRUPT_SPELLCAST = "If any of the following are true, LazyScript will NOT interrupt the spellcast."
+		
+		-- LazyScript.lua
+		--FORM = "Form "
+		--IMMUNITY_TRACKING_NOT_SUPPORTED = "Immunity tracking is not supported for your locale."
+		--NOT_FOUND = " not found."
+		-- DEATHSTIMATOR =  "Deathstimator"
+		GANKED_ATTAKERS_NOT_SUPPORT = "ifGanked and ifXAttackers is not supported for your locale."
+		BATTLEGROUND_FLAG_HOLDER_DET_NOT_SUPPORT = "Battleground flag-holder detection is not supported for your locale."
+		DUELING_DET_NOT_SUPPORT = "Dueling detection is not supported for your locale."
+		DOD_PAR_BLOCK_RES_NOT_SUPPORT = "ifDodged/Parried/Blocked/Resisted are not supported for your locale."
+		WELCOME = "Welcome to "
+		LOADED = " loaded. All the rope you need...\nType |cffffff00/lazyscript help|r to get a list of commands."
+		ENTERING_DUEL = "Entering Duel"
+		LEAVING_DUEL = "Leaving Duel"
+		FLAG_HOLDER = "Flag Holder: "
+		FLAG_HOLDER_EMPTY = "Flag Holder: Empty"
+		BEHIND_ATTACK_FAILED = "I see your behind-only attack just failed, will wait to use it again."
+		INFRONT_ATTACK_FAILED = "I see your infront-only attack just failed, will wait to use it again."
+		OUTDOORS_ATTACK_FAILED = "I see your outdoors-only attack just failed, will wait to use it again."
+		UNHANDLED_EVENT = "Unhandled event: "
+		PVP_OPPONENTS = "|cffe5e519PVP Opponents:"
+		NOT_SUPPORTED = "not supported for your locale."
+		COUNT = " Count:"
+		MONSTER_EMOTE_ARG1 = "Monster Emote: arg1="
+		DETECTED_FLEEING_NPC = "Detected fleeing NPC: "
+		DETECTED_DODGE = " dodge detected at "
+		DETECTED_PARRY = " parry detected at "
+		DETECTED_BLOCK = " block detected at "
+		DETECTED_RESIST = " resist detected at "
+		CMD_DESCRIPTION_1 = " do <attack1> [<attack2> ...]"
+		CMD_DESCRIPTION_2 = " list"
+		CMD_DESCRIPTION_3 = " edit <formName>"
+		CMD_DESCRIPTION_4 = " set <formName> <attack1> [<attack2> ...]"
+		CMD_DESCRIPTION_5 = " copy <formName> <formName2>"
+		CMD_DESCRIPTION_6 = " clear <formName>"
+		CMD_DESCRIPTION_7 = " default [<formName>] [quiet]"
+		CMD_DESCRIPTION_8 = " [<formName>]"
+		CMD_DESCRIPTION_9 = " summon"
+		CMD_DESCRIPTION_10 = " dismiss"
+		CMD_DESCRIPTION_11 = " hideMinionOutOfCombat"
+		CMD_DESCRIPTION_12 = " summonDeath"
+		CMD_DESCRIPTION_13 = " dismissDeath"
+		CMD_DESCRIPTION_14 = " hideDeathMinionOutOfCombat"
+		CMD_DESCRIPTION_15 = " mmshow"
+		CMD_DESCRIPTION_16 = " mmhide"
+		CMD_DESCRIPTION_17 = " interruptExceptionCriteria"
+		CMD_DESCRIPTION_18 = " noLongerInterruptLastInterrupted"
+		CMD_DESCRIPTION_19 = " showTargetCasts"
+		CMD_DESCRIPTION_20 = " autoTarget"
+		CMD_DESCRIPTION_21 = " initiateAutoAttack"
+		CMD_DESCRIPTION_22 = " assist <playername>"
+		CMD_DESCRIPTION_23 = " useImmunitiesList"
+		CMD_DESCRIPTION_24 = " clearImmunitiesList"
+		CMD_DESCRIPTION_25 = " imunityExceptionCriteria"
+		CMD_DESCRIPTION_26 = " showGankMessage"
+		CMD_DESCRIPTION_27 = " clearHistoryAfterCombat"	
+		CMD_DESCRIPTION_28 = " resetDefaultForms"
+		CMD_DESCRIPTION_29 = " resetAllForms"
+		CMD_DESCRIPTION_30 = " about"
+		NO_DEFAULT_FORM_1 = "No default form assigned, choose a form from the " 
+		NO_DEFAULT_FORM_2 = " minimap bubble, or use "
+		NO_DEFAULT_FORM_3 = " default <form> to set one."
+		YOUR_DEFAULT_FORM_1 = "Your default form is "
+		YOUR_DEFAULT_FORM_2 = ", but it doesn't exist or there is an error!  Please choose a form from the "
+		YOUR_DEFAULT_FORM_3 = " minimap bubble or set it using "
+		DEBUGGING_OFF = "Debugging off."
+		DEBUGGING_ON = "Debugging on."
+		FORM_UPDATED = "updated"
+		FORM_CREATED = "created"
+		DOESNT_EXIST = " doesn't exist."
+		COPIED_TO_FORM = " copied to form "
+		REMOVED = " removed."
+		WARNING_INCLUDED_FORM_1 = "WARNING: The following forms included the form "
+		WARNING_INCLUDED_FORM_2 = " which you just removed: "
+		WARNING_INCLUDED_FORM_3 = ". They have been invalidated and must be edited before you can use them."
+		NOW_DEFAULT_FORM = "Default form is now lazyScript."
+		WARNING_NO_LONGER_HAVE_FORM_1 = "WARNING: you no longer have a default form.  Choose one from the "
+		WARNING_NO_LONGER_HAVE_FORM_2 = " minimap bubble."
+		WILL_NO_LONGER_AUTO_TARGET = " will no longer auto-target."
+		WILL_NOW_AUTO_TARGET = " will now auto-target."
+		WILL_NO_LONGER_INITIATE_AUTO_ATTACK = " will no longer initiate auto-attack."
+		WILL_NOW_INITIATE_AUTO_ATTACK = " will now initiate auto-attack."
+		WILL_NO_LONGER_CHECK_IMMUN = " will no longer check for immunities."
+		WILL_NOW_CHECK_IMMUN = " will now check for immunities."
+		IMMUN_LIST_CLEAR = "Immunities list cleared."
+		SHOWING_THE_MINION = "Now showing the minion."
+		HIDING_THE_MINION = "Hiding the minion."
+		MINION_NO_LONGER_HIDE_IN_COMBAT = "Minion will no longer hide out of combat."
+		MINION_NOW_HIDE_IN_COMBAT = "Minion will now hide out of combat."
+		SHOW_DEATHSTIMATOR = "Now showing the deathstimator minion."
+		HIDE_DEATHSTIMATOR = "Hiding the deathstimator minion."
+		DEATH_MINION_NO_LONGER_HIDE_IN_COMBAT = "Death minion will no longer hide out of combat."
+		DEATH_MINION_NOW_HIDE_IN_COMBAT = "Death minion will now hide out of combat."
+		NO_LONGER_SHOWING_WHY = "No longer showing why "
+		SHOWING_WHY = " thinks a target is CCd."
+		NOW_SHOWING_WHY = "Now showing why "
+		NO_LONGER_SHOWING_GANK = "No longer showing gank info."
+		SHOWING_GANK = "Now showing gank info."
+		NO_LONGER_CLEARING_HISTORY = "No longer clearing History after combat."
+		NOW_CLEARING_HISTORY = "Now clearing History after combat."
+		HAVENT_INTERRUPTED = "You haven't interrupted anything recently."
+		NEW_EXCEPTION_1 = "Added new exception ("
+		NEW_EXCEPTION_2 = ") to global interrupt criteria."
+		NO_LONGER_SHOWING_TARGET_CASTS = "No longer showing when the target casts."
+		NOW_SHOWING_TARGET_CASTS = "Now showing when the target casts."
+		ASSIST_SET_TO = "Assist set to "
+		TARGET_ASSIST_NOT_SET = "Target Assist Not Set!"
+		DEFAULT_FORM_IS_NOW = "Default form is now "
+		DEFAULT_FORM_IS = "Default form is "
+		NOT_FOUND_TRY = " not found.  Try "
+		HELP_FOR_HELPS = " help for help."
+		ERASED_ALL_FORMS = "Erased all forms."
+		RESET_FORMS_TO_DEFAULT = "Reset forms to defaults."
+		A = "A " --1142
+		ADDON_NOT_FOUND_FOR_YOUR_CLASS = " addon was not found for your class."
+		NO_FORMS_BOUND_THIS_KEY = "There is no form bound to this key."
+		
+		-- MinimapMenu.lua
+		MINIMAP_BUTTON_MENU_NONE = "(none)"
+		MINIMAP_BUTTON_TOOLTIP_CURRENT_FORM = "Current Form: "
+		MINIMAP_BUTTON_TOOLTIP_1 = "Left-click to choose your form."
+		MINIMAP_BUTTON_TOOLTIP_2 = "Right-click and drag to move this button."
+		MINIMAP_BUTTON_MENU_CREATE_NEW_FORM = "< Create new form >"
+		MINIMAP_BUTTON_MENU_OPT = "< Options >"
+		MINIMAP_BUTTON_MENU_IMOPT = "< Immunity Options >"
+		MINIMAP_BUTTON_MENU_CINTOPT = "< Cast Interrupt Options >"
+		MINIMAP_BUTTON_MENU_DEB = "< Debugging >"
+		MINIMAP_BUTTON_MENU_HELP = "< Help >"
+		MINIMAP_BUTTON_MENU_ABOUT = "< About >"
+		MINIMAP_BUTTON_MENU_OPT_TITLE = " Options"
+		MINIMAP_BUTTON_MENU_OPT_AT = "Auto-Target"
+		MINIMAP_BUTTON_MENU_OPT_AT_INITIATE = "... and initiate Auto-Attack"
+		MINIMAP_BUTTON_MENU_OPT_SM = "Show Minion"
+		MINIMAP_BUTTON_MENU_OPT_ONLY_IN_COMBAT = "... Only in combat"
+		MINIMAP_BUTTON_MENU_OPT_SM_ALWAYS_SHOW_ACTION = "... Always show action"
+		MINIMAP_BUTTON_MENU_OPT_SD = "Show Deathstimator Minion"
+		MINIMAP_BUTTON_MENU_OPT_SD_DEATHSTIMATOR_SAMPLE = "Deathstimator sample window:"
+		MINIMAP_BUTTON_MENU_IMOPT_TITLE = "Immunity Options"
+		MINIMAP_BUTTON_MENU_IMOPT_STOP_IMMUNITY_TRACKING = "Stop Immunity Tracking"
+		MINIMAP_BUTTON_MENU_IMOPT_START_IMMUNITY_TRACKING = "Track New Immunities"
+		MINIMAP_BUTTON_MENU_IMOPT_EDIT_IMMUNITY_EXCEPTION = "Edit Imunity Exception Criteria"
+		MINIMAP_BUTTON_MENU_CINTOPT_TITLE = "Cast Interrupt Options"
+		MINIMAP_BUTTON_MENU_CINTOPT_EDIT_INTERRUPT_EXCEPTION_CRITERIA = "Edit Interrupt Exception Criteria"
+		MINIMAP_BUTTON_MENU_CINTOPT_LAST_INTERRUPTED = "Last interrupted: "
+		MINIMAP_BUTTON_MENU_CINTOPT_DONT_INTERRUPT_IT_AGAIN = "... Don't interrupt it again"
+		MINIMAP_BUTTON_MENU_DEB_TITLE = "Debugging Options"
+		MINIMAP_BUTTON_MENU_DEB_LOG_WHEN_TARGET_CASTS = "Log when target casts"
+		MINIMAP_BUTTON_MENU_DEB_SHOW_WHY_WHEN = "Show why when -ifTargetCCd is true"
+		MINIMAP_BUTTON_MENU_DEB_DISPLAY_GANKED_INFO = "Display \"Ganked\" info"
+		MINIMAP_BUTTON_MENU_DEB_AH = "< Action History >"
+		MINIMAP_BUTTON_MENU_DEB_CLEAR_HISTORY_AFTER_COMBAT = "... Clear History after combat"
+		MINIMAP_BUTTON_MENU_DEB_ITERNAL = "Internal "
+		MINIMAP_BUTTON_MENU_DEB_DEBUGGING_NOISY = " debugging (noisy)"
+		MINIMAP_BUTTON_MENU_FORM_EDIT = "Edit"
+		MINIMAP_BUTTON_MENU_FORM_COPY = "Copy"
+		MINIMAP_BUTTON_MENU_FORM_DELETE = "Delete"
+		MINIMAP_BUTTON_MENU_FORM_SETKEY = "< Set Keybinding >"
+		MINIMAP_BUTTON_MENU_DEB_AH_TITLE = "Action History"
+		MINIMAP_BUTTON_MENU_FORM_SETKEY_TITLE = "Set Keybinding"
+		MINIMAP_BUTTON_MENU_FORM_SETKEY_KEYBIND = "Keybinding "
+		SETKEY_KEYBIND = "Set keybinding "
+		SETKEY_KEYBIND_TO_FORM = " to form: "
+		
+		-- Minion.lua
+		HIDE_THING_NOT_COMBAT = "You're not in combat, and the thing's showing, so I'm hiding it"
+		SHOW_THING_IN_COMBAT = "You're IN combat, and the thing's hidden, so I'm showing it"
+		ZZZ = "...zzz..."
+		MINION = " Minion."
+		MINION_TOOLTIP = "Shift + Left Click to move me around."
+		
+		-- Parse.lua
+		SYNTAX_ERROR_FOUND_IN = "Syntax error found in: "
+		SYNTAX_ERROR_CANNOT_PARSE = "Syntax error: cannot parse bit: "
+		THE_UNITID = "The UnitId '"
+		IS_NOT_VALID = "' is not valid."
+		NOT_POSSIBLE_SPECIFY_RANK = "It is not possible to specify a rank for "
+		YOU_CAN_ONLY_USE_MAX_RANK = "You can only use the maximum rank of "
+		RANK = "Rank "
+		EXCEEDS_MAX_OF = " exceeds maximum of "
+		FOR = " for "
+		OR_IS_INVALID = " or is invalid."
+		PARSED = "Parsed "
+		ACTIONS_AND = " actions and "
+		MASKS = " masks"
+		WARNING_NIL_MASK_FOUND_1 = "WARNING! A 'nil' mask was found when parsing the form line \""
+		WARNING_NIL_MASK_FOUND_2 = "\". This may be due to LazyScript being incompatible with your class' Lazy-addon or it may be a legitimate bug. Please report this error and the full form line to lazytest@googlegroups.com."
+		REMOVED_1 = "Removed "
+		DUPLICATE_MASKS = " duplicate masks."
+		SYNTAX_ERROR_CANNOT_HAVE_MULTIPLE_ACTIONS = "Syntax error: cannot have multiple actions that activate the global cooldown in the same line."
+		CANNOT_INCLUDE_FORM_1 = ": Cannot include form "
+		CANNOT_INCLUDE_FORM_2 = " in itself!"
+		COULD_NOT_INCLUDE_FORM = ": Could not include form "
+		DOES_NOT_EXIST = " because it does not exist!"
+		INCLUDING_FORM = ": Including form: "
+		CONTAINS_ERRORS = " because it contains errors!"
+		COULD_NOT_PARSE_FROM_LINE = ": Could not parse form line: "
+		TOTAL_MASKS = ": Total masks: "
+		PARSING_FORM = "Parsing form "
+		REPARSING_FORM = "Reparsing form "
+		WHITCH_DEPENDS_FORM = " which depends on form "
+		CLEARING_CACHE = "Clearing cache for form "
+		
+		-- ParseBuffs.lua
+		-- NOT_SUPPORTED = "not supported for your locale."
+		OPTIMIZED_BUFF_DEBUFF_CHECK_NOT_VALID = "Optimized buff/debuff checking is not available for your locale. You will have to use ifHasBuffTitle, ifHasDebuffTitle, etc. instead."
+		LOOKING_FOR = "Looking for: "
+		APPLICATIONS = " Applications: "
+		IS_NOT_VALID_UNITID = " is not a valid UnitId."
+		BUFF_INFO_FOUND = "Buff info found for: "
+		DID_NOT_FIND = "Did not find "
+		IN_THE = " in the "
+		DATABASE_TRY = " database. Try "
+		INSTEAD = " instead."
+		FOUND_KNOWN_BUFF = "Found known buff: "
+		BUFF_DEBUFF_CATEGORY = "Buff/debuff category "
+		NOT_RECOGNISED = " not recognised."
+		AFFLICTED_BY = " afflicted by "
+		SORRY = "Sorry,"
+		DID_NOT_FIND_ANY_BUFFS = "Did not find any buffs in the "
+		CATEGORY = " category."
+		
+		-- ParseGeneral.lua
+		-- THE_UNITID = "The UnitId '"
+		-- IS_NOT_VALID = "' is not valid."
+		-- FOUND_KNOWN_BUFF = "Found known buff: "
+		-- IS_NOT_VALID_UNITID = " is not a valid UnitId."
+		-- SPELLSEARCH_FOUND_NIL_TEXTURE = "SpellSearch found nil texture at index "
+		-- SPELLSEARCH_FOUND = "SpellSearch found "
+		-- AT_INDEX = " at index "
+		-- SORRY = "Sorry,"
+		-- NOT_SUPPORTED = "not supported for your locale."
+		UNKNOWN_CHANNEL_NAME = "Unknown channel name: "
+		CANT_SHOOT_WANDS = "You can't shoot wands."
+		NOT_HANE_AUTO_SHOT = "You do not have Auto Shot."
+		NO_BUFF_ENTRY_FOUND = "No buff entry found for "
+		TRY_CANCLEBUFFTITLE =  ". Try using cancelBuffTitle instead."
+		COULD_NOT_FIND_FORM = "Could not find form "
+		ONLY_MAIN_AND_OFF_HAND_SUPPORTED = "Only MainHand and OffHand are supported, not"
+		RANGECHECKACTION_IS_NIL = "TargetInMeleeRange: rangeCheckAction is nil."
+		ISACTIONINRANGE_RETURNED_NIL = "TargetInMeleeRange: IsActionInRange returned nil. Target is invalid."
+		IFTARGETINMELEERANGE_NOT_SUPPORT = "ifTargetInMeleeRange is not currently supported for your class."
+		IFTARGETINMELEERANGE_NOT_SUPPORT_NOT_HAVE = "ifTargetInMeleeRange is not currently supported for your class because you do not have "
+		YET = " yet."
+		MOBINFO2_NOT_INSTALLED = "MobInfo2 (or equivalent) not installed, can't determine target's HP."
+		LOCALE_NOT_EXIST = "Localization does not exist for problem mount: "
+		YOU_IN_BG = "You're in batteground: "
+		ENABLE_GCD_1 = "To enable checking of the Global Cooldown, please place the "
+		ENABLE_GCD_2 = " action on your action bar."
+		UNKNOWN_CLASS = "HAX! Unknown class: "
+		IFTARGETFLAGRUNNER_NOT_SUPPORT = "Sorry, ifTargetFlagRunner is not supported for hostile targets in your locale."
+		SEARCH_TARGET_OVER = "Search for target over lvl "
+		SEARCH_TARGET_EQUAL = "Search for target equal to lvl "
+		SEARCH_TARGET_UNDER = "Search for target under lvl "
+		UNABLE_TO_DETERMINE = "unable to determine plus/minus sign"
+		KEY = "Key: "
+		VALUE = ", value: "
+		MATCHKEY = "Match found: Key: "
+		ONLY_CTRL_ALT_SHIFT = "Only Ctrl, Alt, and Shift are supported, not: "
+		YOU_MUST_PUT = "You must put an action before -everyXXs."
+		SYNTAX_EG = "syntax e.g. "
+		NOT_VALID_NUMBER = " is not a valid number. Valid examples are: 1, 1.0, 1.5, 19.25"
+		COULD_NOT_FIND_ACTION = "Could not find action: "
+		ITEM = "Item "
+		HAS_IMMUNITY_TO = " has immunity to "
+		IFTARGETIMMUNE_MUST_APPEAR_AFTER = "-ifTargetImmune must appear after the action to be checked."
+		DID_NOT_RECOGNICE = "Did not recognise tracking type: "
+		UNRECOGNISED_ACTION = "Unrecognised action: "
+		ACTION_MUST_APPEAR_BEFORE = "The action must appear before -ifIsCurrentAction."
+		INVALID_OPERATOR = "Invalid operator: "
+		ARE_NOT_SUPPORTED = " are not supported for your locale."
+		IS_NOT_VALID_NUMBER = "' is not a valid number."
+		DEATH_IN_2 = "Death in: "
+		SECONDS = " seconds."
+		TIMETODEATH_CANNOT_ESTIMATED = "TimeToDeath cannot be estimated without MobInfo-2 installed."
+		ONLY_MAIN_OR_OFF_HAND_SUPPORTED = "Only MainHand or OffHand supported, not "
+		SPELLDEARCH_FOUND_MORE_THAN = "SpellSearch found more than "
+		SPELLS = "spells."
+		
+		-- Tooltip.lua
+		CLEARING_CACHE_FOR = ": clearing cache for "
+		
+		-- Util.lua
+		SPELL = "Spell: "
+		TEXTURES = "Textures: "
+		
+		BINDING_NAME_LAZYSCRIPT_EXECUTE = "Execute Default Form"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND1 = "Execute Form 1"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND2 = "Execute Form 2"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND3 = "Execute Form 3"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND4 = "Execute Form 4"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND5 = "Execute Form 5"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND6 = "Execute Form 6"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND7 = "Execute Form 7"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND8 = "Execute Form 8"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND9 = "Execute Form 9"
+		BINDING_NAME_LAZYSCRIPT_KEYBIND10 = "Execute Form 10"
 	end
 end
 
