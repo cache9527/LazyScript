@@ -105,6 +105,52 @@ function lazyShamanLoad.LoadShamanLocalization(locale)
 		
 		-- ParseShaman.lua
 		function lazyShaman.CustomLocaleHelp() return [[<H2>Критерии Шамана:</H2>]] end
+
+		elseif (locale == "zhCN") then
+		lazyShamanLocale.zhCN.ACTION_TTS.earthShock           = "地震术"
+		lazyShamanLocale.zhCN.ACTION_TTS.flameShock           = "烈焰震击"
+		lazyShamanLocale.zhCN.ACTION_TTS.frostShock           = "冰霜震击"
+		lazyShamanLocale.zhCN.ACTION_TTS.rockbiter            = "石化武器"
+		lazyShamanLocale.zhCN.ACTION_TTS.flametongue          = "火舌武器"
+		lazyShamanLocale.zhCN.ACTION_TTS.frostbrand           = "冰封武器"
+		lazyShamanLocale.zhCN.ACTION_TTS.windfury             = "风怒武器"
+		lazyShamanLocale.zhCN.ACTION_TTS.chainHeal            = "治疗链"
+		lazyShamanLocale.zhCN.ACTION_TTS.chainLight           = "闪电链"
+		lazyShamanLocale.zhCN.ACTION_TTS.cureDisease          = "祛病术"
+		lazyShamanLocale.zhCN.ACTION_TTS.curePoison           = "消毒术"
+		lazyShamanLocale.zhCN.ACTION_TTS.elemMastery          = "元素掌握"
+		lazyShamanLocale.zhCN.ACTION_TTS.ghostWolf            = "幽魂之狼"
+		lazyShamanLocale.zhCN.ACTION_TTS.heal                 = "治疗波"
+		lazyShamanLocale.zhCN.ACTION_TTS.lesserHeal           = "次级治疗波"
+		lazyShamanLocale.zhCN.ACTION_TTS.lightBolt            = "闪电箭"
+		lazyShamanLocale.zhCN.ACTION_TTS.lightShield          = "闪电之盾"
+		lazyShamanLocale.zhCN.ACTION_TTS.natureSwift          = "自然迅捷"
+		lazyShamanLocale.zhCN.ACTION_TTS.purge                = "净化术"
+		lazyShamanLocale.zhCN.ACTION_TTS.stormstrike          = "风暴打击"
+		
+		lazyShamanLocale.zhCN.ACTION_TTS.diseaseTotem         = "祛病图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.bindTotem            = "地缚图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.fireNovaTotem        = "火焰新星图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.fireResistTotem      = "抗火图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.flameTotem           = "火舌图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.frostResistTotem     = "抗寒图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.graceTotem           = "风之优雅图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.groundingTotem       = "根基图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.hsTotem              = "治疗之泉图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.magmaTotem           = "熔岩图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.msTotem              = "法力之泉图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.mtTotem              = "法力之潮图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.natureResistTotem    = "自然抗性图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.poisonTotem          = "清毒图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.searingTotem         = "灼热图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.sentryTotem          = "岗哨图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.clawTotem            = "石爪图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.skinTotem            = "石肤图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.strengthTotem        = "大地之力图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.tranquilTotem        = "宁静之风图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.tremorTotem          = "战栗图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.wfTotem              = "风怒图腾"
+		lazyShamanLocale.zhCN.ACTION_TTS.windwallTotem        = "风墙图腾"
 		
 	end
 end
