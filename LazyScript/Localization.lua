@@ -3179,7 +3179,7 @@ function lazyScript.LoadLocalization(locale)
 			direBear             = "巨熊形态",--"Dire Bear Form",
 			moonkin              = "枭兽形态",--"Moonkin Form",
 			
-			prowl                = "潜行",--"Prowl", 
+			prowl                = "潜行",--"Prowl",
 			rake                 = "扫击",--"Rake",
 			rip                  = "撕扯",--"Rip",
 			dash                 = "急奔",--"Dash",
@@ -3364,7 +3364,7 @@ function lazyScript.LoadLocalization(locale)
 			soulLink             = "灵魂链接",--"Soul Link",
 			
 			-- Pet related
-			petProwl             = "潜行",--"Prowl",
+			petProwl             = "潜伏",--"Prowl",ability_druid_supriseattack
 			
 			-- Other
 			
