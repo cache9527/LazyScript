@@ -234,5 +234,39 @@ function lazyRogueLoad.LoadRogueLocalization(locale)
 		lazyRogueLocale.frFR.EVISCERATE_HIT = "Votre Evisc\195\169ration touche (.+) et inflige (%d+) points de d\195\169g\195\162ts."
 		lazyRogueLocale.frFR.EVISCERATE_CRIT = "Votre Evisc\195\169ration inflige un coup critique \195\160 (.+) %((%d+) points de d\195\169g\195\162ts%).";
 		
+		elseif (locale == "zhCN") then
+		
+		lazyRogueLocale.zhCN.ACTION_TTS.adrenaline        = "冲动"
+		lazyRogueLocale.zhCN.ACTION_TTS.ambush            = "伏击"
+		lazyRogueLocale.zhCN.ACTION_TTS.bladeFlurry       = "剑刃乱舞"
+		lazyRogueLocale.zhCN.ACTION_TTS.blind             = "致盲"
+		lazyRogueLocale.zhCN.ACTION_TTS.bs                = "背刺"
+		lazyRogueLocale.zhCN.ACTION_TTS.cs                = "偷袭"
+		lazyRogueLocale.zhCN.ACTION_TTS.coldBlood         = "冷血"
+		lazyRogueLocale.zhCN.ACTION_TTS.distract          = "扰乱"
+		lazyRogueLocale.zhCN.ACTION_TTS.evasion           = "闪避"
+		lazyRogueLocale.zhCN.ACTION_TTS.evisc             = "剔骨"
+		lazyRogueLocale.zhCN.ACTION_TTS.expose            = "破甲"
+		lazyRogueLocale.zhCN.ACTION_TTS.feint             = "佯攻"
+		lazyRogueLocale.zhCN.ACTION_TTS.garrote           = "绞喉"
+		lazyRogueLocale.zhCN.ACTION_TTS.ghostly           = "鬼魅攻击"
+		lazyRogueLocale.zhCN.ACTION_TTS.gouge             = "凿击"
+		lazyRogueLocale.zhCN.ACTION_TTS.hemo              = "出血"
+		lazyRogueLocale.zhCN.ACTION_TTS.kick              = "脚踢"
+		lazyRogueLocale.zhCN.ACTION_TTS.ks                = "肾击"
+		lazyRogueLocale.zhCN.ACTION_TTS.pickPocket        = "偷窃"
+		lazyRogueLocale.zhCN.ACTION_TTS.premeditation     = "预谋"
+		lazyRogueLocale.zhCN.ACTION_TTS.preparation       = "伺机待发"
+		lazyRogueLocale.zhCN.ACTION_TTS.riposte           = "还击"
+		lazyRogueLocale.zhCN.ACTION_TTS.rupture           = "割裂"
+		lazyRogueLocale.zhCN.ACTION_TTS.sap               = "闷棍"
+		lazyRogueLocale.zhCN.ACTION_TTS.snd               = "切割"
+		lazyRogueLocale.zhCN.ACTION_TTS.sprint            = "疾跑"
+		lazyRogueLocale.zhCN.ACTION_TTS.ss                = "邪恶攻击"
+		lazyRogueLocale.zhCN.ACTION_TTS.stealth           = "潜行"
+		lazyRogueLocale.zhCN.ACTION_TTS.vanish            = "消失"
+		
+		lazyRogueLocale.zhCN.EVISCERATE_HIT = "你的剔骨击中(.+)造成(%d+)点伤害。"
+		lazyRogueLocale.zhCN.EVISCERATE_CRIT = "你的剔骨对(.+)造成(%d+)的致命一击伤害。";
 	end
 end
