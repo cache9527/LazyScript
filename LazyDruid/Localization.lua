@@ -258,5 +258,69 @@ function lazyDruidLoad.LoadDruidLocalization(locale)
 		lazyDruidLocale.frFR.BITE_HIT = nil
 		lazyDruidLocale.frFR.BITE_CRIT = nil
 		
+		elseif (locale == "zhCN") then
+		
+		lazyDruidLocale.zhCN.ACTION_TTS.bite               = "凶猛撕咬"
+		lazyDruidLocale.zhCN.ACTION_TTS.claw               = "爪击"
+		lazyDruidLocale.zhCN.ACTION_TTS.cower              = "畏缩"
+		lazyDruidLocale.zhCN.ACTION_TTS.dash               = "急奔"
+		lazyDruidLocale.zhCN.ACTION_TTS.pounce             = "突袭"
+		lazyDruidLocale.zhCN.ACTION_TTS.prowl              = "潜行"
+		lazyDruidLocale.zhCN.ACTION_TTS.rake               = "扫击"
+		lazyDruidLocale.zhCN.ACTION_TTS.ravage             = "毁灭"
+		lazyDruidLocale.zhCN.ACTION_TTS.rip                = "撕扯"
+		lazyDruidLocale.zhCN.ACTION_TTS.shred              = "撕碎"
+		lazyDruidLocale.zhCN.ACTION_TTS.tigersFury         = "猛虎之怒"
+		lazyDruidLocale.zhCN.ACTION_TTS.trackHumanoids     = "追踪人型生物"
+		
+		lazyDruidLocale.zhCN.ACTION_TTS.bash               = "重击"
+		lazyDruidLocale.zhCN.ACTION_TTS.challenge          = "挑战咆哮"
+		lazyDruidLocale.zhCN.ACTION_TTS.charge             = "野性冲锋"
+		lazyDruidLocale.zhCN.ACTION_TTS.demoralize         = "挫志咆哮"
+		lazyDruidLocale.zhCN.ACTION_TTS.enrage             = "狂怒"
+		lazyDruidLocale.zhCN.ACTION_TTS.frenziedRegen      = "狂暴回复"
+		lazyDruidLocale.zhCN.ACTION_TTS.growl              = "低吼"
+		lazyDruidLocale.zhCN.ACTION_TTS.maul               = "槌击"
+		lazyDruidLocale.zhCN.ACTION_TTS.swipe              = "挥击"
+		
+		lazyDruidLocale.zhCN.ACTION_TTS.abolishPoison      = "驱毒术"
+		lazyDruidLocale.zhCN.ACTION_TTS.barkskin           = "树皮术"
+		lazyDruidLocale.zhCN.ACTION_TTS.curePoison         = "消毒术"
+		lazyDruidLocale.zhCN.ACTION_TTS.faerieFire         = "精灵之火"
+		lazyDruidLocale.zhCN.ACTION_TTS.feralFire          = "精灵之火（野性）"
+		lazyDruidLocale.zhCN.ACTION_TTS.gotw               = "野性赐福"
+		lazyDruidLocale.zhCN.ACTION_TTS.grasp              = "自然之握"
+		lazyDruidLocale.zhCN.ACTION_TTS.healingTouch       = "治疗之触"
+		lazyDruidLocale.zhCN.ACTION_TTS.hibernate          = "休眠"
+		lazyDruidLocale.zhCN.ACTION_TTS.hurricane          = "飓风"
+		lazyDruidLocale.zhCN.ACTION_TTS.innervate          = "激活"
+		lazyDruidLocale.zhCN.ACTION_TTS.moonfire           = "月火术"
+		lazyDruidLocale.zhCN.ACTION_TTS.motw               = "野性印记"
+		lazyDruidLocale.zhCN.ACTION_TTS.ns                 = "自然迅捷"
+		lazyDruidLocale.zhCN.ACTION_TTS.ooc                = "清晰预兆"
+		lazyDruidLocale.zhCN.ACTION_TTS.rebirth            = "复生"
+		lazyDruidLocale.zhCN.ACTION_TTS.regrowth           = "愈合"
+		lazyDruidLocale.zhCN.ACTION_TTS.rejuv              = "回春术"
+		lazyDruidLocale.zhCN.ACTION_TTS.removeCurse        = "解除诅咒"
+		lazyDruidLocale.zhCN.ACTION_TTS.roots              = "纠缠根须"
+		lazyDruidLocale.zhCN.ACTION_TTS.soothe             = "安抚动物"
+		lazyDruidLocale.zhCN.ACTION_TTS.starfire           = "星火术"
+		lazyDruidLocale.zhCN.ACTION_TTS.swarm              = "虫群"
+		lazyDruidLocale.zhCN.ACTION_TTS.swiftmend          = "迅捷治愈"
+		lazyDruidLocale.zhCN.ACTION_TTS.teleMoonglade      = "传送：月光林地"
+		lazyDruidLocale.zhCN.ACTION_TTS.thorns             = "荆棘术"
+		lazyDruidLocale.zhCN.ACTION_TTS.tranquility        = "宁静"
+		lazyDruidLocale.zhCN.ACTION_TTS.wrath              = "愤怒"
+		
+		lazyDruidLocale.zhCN.ACTION_TTS.bear               = "熊形态"
+		lazyDruidLocale.zhCN.ACTION_TTS.aquatic            = "水栖形态"
+		lazyDruidLocale.zhCN.ACTION_TTS.cat                = "猎豹形态"
+		lazyDruidLocale.zhCN.ACTION_TTS.travel             = "旅行形态"
+		lazyDruidLocale.zhCN.ACTION_TTS.moonkin            = "枭兽形态"
+		
+		
+		lazyDruidLocale.zhCN.BITE_HIT = "你的凶猛撕咬击中(.+)造成(%d+)点伤害。"
+		lazyDruidLocale.zhCN.BITE_CRIT = "你的凶猛撕咬击对(.+)造成(%d+)的致命一击伤害。";
+		
 	end
 end
