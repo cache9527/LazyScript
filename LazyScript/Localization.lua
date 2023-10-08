@@ -331,6 +331,8 @@ lsLocale.enUS.BUFF_TTS = {
 	wyvern               = "Wyvern Sting",
 	wyvernCC             = "Wyvern Sting",
 	wyvernDot            = "Wyvern Sting",
+	--turtlewow
+	steadyshot			= "Trueshot",
 	
 	-- Mage Buffs
 	amplifyMagic         = "Amplify Magic",
