@@ -332,7 +332,7 @@ lsLocale.enUS.BUFF_TTS = {
 	wyvernCC             = "Wyvern Sting",
 	wyvernDot            = "Wyvern Sting",
 	--turtlewow
-	steadyshot			= "Trueshot",
+	steadyshot	     = "Trueshot",
 	
 	-- Mage Buffs
 	amplifyMagic         = "Amplify Magic",
@@ -3245,7 +3245,8 @@ function lazyScript.LoadLocalization(locale)
 			wyvern               = "翼龙钉刺",--"Wyvern Sting",
 			wyvernCC             = "翼龙钉刺",--"Wyvern Sting",
 			wyvernDot            = "翼龙钉刺",--"Wyvern Sting",
-			
+			--添加对乌龟服稳固射击支持
+			steadyshot	     = "稳固射击",--"Trueshot",
 			-- Mage Buffs
 			amplifyMagic         = "魔法增效",--"Amplify Magic",
 			brilliance           = "奥术光辉",--"Arcane Brilliance",
