@@ -56,6 +56,8 @@ function lazyHunterLoad.LoadHunterLocalization(locale)
 	lazyHunterLocale.enUS.ACTION_TTS.wingClip             = "Wing Clip"
 	lazyHunterLocale.enUS.ACTION_TTS.bestialWrath         = "Bestial Wrath"
 	lazyHunterLocale.enUS.ACTION_TTS.wyvern               = "Wyvern Sting"
+	--add for turlewow
+	lazyHunterLocale.enUS.ACTION_TTS.steadyshot           = "Trueshot"
 	
 	lazyHunterLocale.enUS.ACTION_TTS.petBite              = "Bite"
 	lazyHunterLocale.enUS.ACTION_TTS.petBreath            = "Lightning Breath"
@@ -245,6 +247,8 @@ function lazyHunterLoad.LoadHunterLocalization(locale)
 		lazyHunterLocale.zhCN.ACTION_TTS.wingClip             = "摔绊"
 		lazyHunterLocale.zhCN.ACTION_TTS.bestialWrath         = "狂野怒火"
 		lazyHunterLocale.zhCN.ACTION_TTS.wyvern               = "翼龙钉刺"
+		--添加对乌龟服猎人新技能稳固射击的支持
+		lazyHunterLocale.enUS.ACTION_TTS.steadyshot           = "稳固射击"
 		
 		lazyHunterLocale.zhCN.ACTION_TTS.petBite              = "撕咬"
 		lazyHunterLocale.zhCN.ACTION_TTS.petBreath            = "闪电吐息"
