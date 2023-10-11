@@ -2983,7 +2983,8 @@ function lazyScript.LoadLocalization(locale)
 		}
 		
 		-- NPC is fleeing
-		lsLocale.zhCN.NPC_FLEE_MSG = "%%s attempts to run away in fear!"
+		-- 需要中文内容
+		--lsLocale.zhCN.NPC_FLEE_MSG = "%%s attempts to run away in fear!"
 		
 		-- When something is immune to your spell, such as poison etc.
 		lsLocale.zhCN.IMMUNE = "你的(.+)施放失败。(.+)对此免疫。"--"Your (.+) failed. (.+) is immune."
@@ -3049,7 +3050,7 @@ function lazyScript.LoadLocalization(locale)
 		
 		lsLocale.zhCN.FEAR_TTS = {
 				"胁迫", --"Intimidated", 
-				"因恐惧而逃跑", --"Fleeing in [fF]ear", 	-- Intimidation
+				"因恐惧而逃跑", --"Fleeing in [fF]ear", 	-- 
 				"恐惧地逃跑",--"Running in [fF]ear",	-- Psychic Scream
 				"恐惧",	--"Feared",				-- Fear
 			
@@ -3253,7 +3254,7 @@ function lazyScript.LoadLocalization(locale)
 			combustion           = "燃烧",--"Combustion",
 			dampenMagic          = "魔法抑制",--"Dampen Magic",
 			evocation            = "唤醒",--"Evocation",
-			fireVulnerability    = "Fire Vulnerability",
+			fireVulnerability    = "火焰易伤",--"Fire Vulnerability",
 			fireWard             = "防护火焰结界",--"Fire Ward",
 			frostWard            = "防护冰霜结界",--"Frost Ward",
 			frostArmor           = "霜甲术",--"Frost Armor",
