@@ -122,6 +122,8 @@ function lazyScript.loadBuffTable()
 		aspectPack           = lazyScript.Buff:New("aspectPack",          "Ability_Mount_WhiteTiger"                        ),
 		aspectMonkey         = lazyScript.Buff:New("aspectMonkey",        "Ability_Hunter_AspectOfTheMonkey"                ),
 		aspectWild           = lazyScript.Buff:New("aspectWild",          "Spell_Nature_ProtectionformNature"               ),
+		--add for turtlewow
+		aspectWolf           = lazyScript.Buff:New("aspectWolf",          "Ability_Mount_WhiteDireWolf"    		           ),	
 		bestialWrath         = lazyScript.Buff:New("bestialWrath",        "Ability_Druid_FerociousBite"                     ),
 		concussive           = lazyScript.Buff:New("concussive",          "Spell_Frost_Stun"                                ),
 		eagleEye             = lazyScript.Buff:New("eagleEye",            "Ability_Hunter_EagleEye"                         ),

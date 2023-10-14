@@ -10,6 +10,8 @@ function lazyHunterLoad.LoadHunterLocalization(locale)
 	lazyHunterLocale.enUS.ACTION_TTS.aspectMonkey         = "Aspect of the Monkey"
 	lazyHunterLocale.enUS.ACTION_TTS.aspectPack           = "Aspect of the Pack"
 	lazyHunterLocale.enUS.ACTION_TTS.aspectWild           = "Aspect of the Wild"
+	--add turlewow Aspect of The Wolf
+	lazyHunterLocale.enUS.ACTION_TTS.aspectWolf			  = "Aspect of the Wolf"
 	lazyHunterLocale.enUS.ACTION_TTS.eotb                 = "Eyes of the Beast"
 	lazyHunterLocale.enUS.ACTION_TTS.beastLore            = "Beast Lore"
 	lazyHunterLocale.enUS.ACTION_TTS.call                 = "Call Pet"
@@ -201,6 +203,8 @@ function lazyHunterLoad.LoadHunterLocalization(locale)
 		lazyHunterLocale.zhCN.ACTION_TTS.aspectMonkey         = "灵猴守护"
 		lazyHunterLocale.zhCN.ACTION_TTS.aspectPack           = "豹群守护"
 		lazyHunterLocale.zhCN.ACTION_TTS.aspectWild           = "野性守护"
+		--add turlewow Aspect of The Wolf
+		lazyHunterLocale.zhCN.ACTION_TTS.aspectWolf			  = "孤狼守护"
 		lazyHunterLocale.zhCN.ACTION_TTS.eotb                 = "野兽之眼"
 		lazyHunterLocale.zhCN.ACTION_TTS.beastLore            = "野兽知识"
 		lazyHunterLocale.zhCN.ACTION_TTS.call                 = "召唤宠物"

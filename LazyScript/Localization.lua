@@ -306,6 +306,8 @@ lsLocale.enUS.BUFF_TTS = {
 	aspectPack           = "Aspect of the Pack",
 	aspectMonkey         = "Aspect of the Monkey",
 	aspectWild           = "Aspect of the Wild",
+	--add for turtlewow
+	aspectWolf	         = "Aspect of the Wolf",
 	bestialWrath         = "Bestial Wrath",
 	concussive           = "Concussive Shot",
 	eagleEye             = "Eagle Eye",
@@ -3221,6 +3223,8 @@ function lazyScript.LoadLocalization(locale)
 			aspectPack           = "豹群守护",--"Aspect of the Pack",
 			aspectMonkey         = "灵猴守护",--"Aspect of the Monkey",
 			aspectWild           = "野性守护",--"Aspect of the Wild",
+				--add for turtlewow
+			aspectWolf	         = "孤狼守护",--"Aspect of the Wolf",
 			bestialWrath         = "狂野怒火",--"Bestial Wrath",
 			concussive           = "震荡射击",--"Concussive Shot",
 			eagleEye             = "鹰眼术",--"Eagle Eye",
