@@ -134,7 +134,7 @@ lsLocale.enUS.DOT_TTS = {
 }
 
 lsLocale.enUS.FEAR_TTS = {
-	"Intimidated", 
+	"Intimidated", --warrior Intimidating Shout
 	"Fleeing in [fF]ear", 	-- Intimidation
 	"Running in [fF]ear",	-- Psychic Scream
 	"Feared",				-- Fear
@@ -152,11 +152,11 @@ lsLocale.enUS.ASLEEP_TTS = {
 }
 
 lsLocale.enUS.DISORIENTED_TTS = {
-	"Disoriented",				-- Scatter Shot
+	"Disoriented",				-- Scatter Shot/Blind
 }
 
 lsLocale.enUS.INCAPACITATED_TTS = {
-	"Incapacitated",			-- Gouge
+	"Incapacitated",			-- Gouge/sap
 }
 
 lsLocale.enUS.BUFF_TTS = {
@@ -3051,9 +3051,9 @@ function lazyScript.LoadLocalization(locale)
 		}
 		
 		lsLocale.zhCN.FEAR_TTS = {
-				"胁迫", --"Intimidated", 
+				"破胆", --"Intimidated", 破胆怒吼 Intimidating Shout
 				"因恐惧而逃跑", --"Fleeing in [fF]ear", 	-- 
-				"恐惧地逃跑",--"Running in [fF]ear",	-- Psychic Scream
+				"充满恐惧地想要转身逃跑",--"Running in [fF]ear",	-- Psychic Scream
 				"恐惧",	--"Feared",				-- Fear
 			
 		}
