@@ -2986,7 +2986,7 @@ function lazyScript.LoadLocalization(locale)
 		
 		-- NPC is fleeing
 		-- 需要中文内容
-		--lsLocale.zhCN.NPC_FLEE_MSG = "%%s 充满恐惧地想要转身逃跑!"
+		lsLocale.zhCN.NPC_FLEE_MSG = "%%s 充满恐惧地想要转身逃跑!"
 		
 		-- When something is immune to your spell, such as poison etc.
 		lsLocale.zhCN.IMMUNE = "你的(.+)施放失败。(.+)对此免疫。"--"Your (.+) failed. (.+) is immune."
